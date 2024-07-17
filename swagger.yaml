@@ -449,6 +449,13 @@ paths:
                     type: string
       tags: &ref_10
         - auth
+    get:
+      operationId: AuthController_root
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags: *ref_10
   /auth/register:
     post:
       operationId: AuthController_signUp

@@ -8,6 +8,7 @@ import {
   Param,
   Post,
   Put,
+  Render,
   UseGuards,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
@@ -94,5 +95,13 @@ export class AuthController {
   @Delete('users/:id')
   deleteUser(@Param('id') id: string) {
     return this.authService.deleteUser(id);
+  }
+
+
+
+  @Get('login')
+  @Render('auth/login')
+  root() {
+    return { message: 'Hello world!' };
   }
 }

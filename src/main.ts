@@ -4,6 +4,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { writeFileSync } from 'fs';
 
 import { AppModule } from './app.module';
+import { join } from 'path';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -11,6 +12,12 @@ async function bootstrap() {
   app.enableCors({
     origin: '*',
   });
+
+  (app as any).useStaticAssets(join(__dirname, '..', 'public'));
+  (app as any).setBaseViewsDir(join(__dirname, '..', 'views'));
+  (app as any).setViewEngine('hbs');
+
+
   const config = new DocumentBuilder()
     .setTitle('UG Examine')
     .setDescription('UG Examine API description')
