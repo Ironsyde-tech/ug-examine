@@ -1,0 +1,291 @@
+.frame-child22 {
+  width: 572px;
+  height: 1001px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-white);
+  display: none;
+  max-width: 100%;
+}
+.image-19-icon3 {
+  height: 242px;
+  width: 197px;
+  position: relative;
+  object-fit: cover;
+  mix-blend-mode: normal;
+  z-index: 1;
+}
+.image-19-container {
+  width: 491px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 100%;
+}
+.email {
+  position: relative;
+  display: inline-block;
+  min-width: 82px;
+  z-index: 1;
+}
+.email-input1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-4xs) var(--padding-6xs);
+}
+.email-field-child {
+  align-self: stretch;
+  flex: 1;
+  border-radius: var(--br-mini);
+  background-color: var(--color-gainsboro-400);
+}
+.email-field-child,
+.password {
+  position: relative;
+  z-index: 1;
+}
+.email-field {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+.frame-child23 {
+  align-self: stretch;
+  height: 51px;
+  position: relative;
+  border-radius: var(--br-mini);
+  background-color: var(--color-gainsboro-400);
+  z-index: 1;
+}
+.email-field-parent {
+  align-self: stretch;
+  height: 268px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-smi);
+  box-sizing: border-box;
+  gap: var(--gap-15xl);
+  font-size: var(--font-size-13xl);
+}
+.remember-me-checkbox {
+  height: 33px;
+  width: 39px;
+  background-color: rgba(217, 217, 217, 0.58);
+}
+.remember-me-checkbox,
+.remember-my-preference {
+  position: relative;
+  z-index: 1;
+}
+.remember-me-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) 0 0;
+}
+.frame-wrapper10,
+.remember-me-checkbox-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.remember-me-checkbox-parent {
+  gap: var(--gap-lg);
+}
+.frame-wrapper10 {
+  padding: 0 var(--padding-4xs);
+  box-sizing: border-box;
+  font-family: var(--font-trykker);
+}
+.forgot-password2 {
+  position: relative;
+  z-index: 1;
+}
+.forgot-password-link,
+.frame-parent20 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.forgot-password-link {
+  flex-direction: row;
+  padding: 0 var(--padding-4xs);
+}
+.frame-parent20 {
+  align-self: stretch;
+  flex-direction: column;
+  gap: 35px;
+  max-width: 100%;
+}
+.frame-child24 {
+  height: 46.1px;
+  width: 488px;
+  position: relative;
+  border-radius: var(--br-6xl);
+  display: none;
+  max-width: 100%;
+}
+.sign-in {
+  width: 133px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  font-family: var(--font-rubik);
+  color: var(--color-white);
+  text-align: left;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.login-form-container-inner,
+.vector-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.vector-container {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-4xs) var(--padding-xl) var(--padding-3xs-7)
+    var(--padding-18xl);
+  background-color: var(--color-gray-400);
+  flex: 1;
+  border-radius: var(--br-6xl);
+  justify-content: center;
+  white-space: nowrap;
+  z-index: 1;
+}
+.vector-container:hover {
+  background-color: var(--color-steelblue-100);
+}
+.login-form-container-inner {
+  align-self: stretch;
+  justify-content: flex-start;
+  padding: 0 var(--padding-lgi) 0 var(--padding-4xs);
+}
+.login-form-container,
+.rectangle-parent10 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.login-form-container {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 90px;
+  max-width: 100%;
+}
+.rectangle-parent10 {
+  width: 572px;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-white);
+  align-items: flex-end;
+  padding: var(--padding-7xl) var(--padding-12xl) 128.9px var(--padding-6xl);
+  box-sizing: border-box;
+  gap: 67px;
+  max-width: calc(100% - 36px);
+}
+.image-39-icon {
+  width: 16px;
+  height: 18px;
+  position: relative;
+  border-radius: var(--br-9xs);
+  object-fit: cover;
+}
+.image-39-wrapper,
+.login {
+  display: flex;
+  align-items: flex-start;
+}
+.image-39-wrapper {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 241px 0 0;
+}
+.login {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-whitesmoke-100);
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--padding-30xl) 173px 67px 556px;
+  box-sizing: border-box;
+  line-height: normal;
+  letter-spacing: normal;
+  gap: var(--gap-xl);
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-rubik);
+}
+@media screen and (max-width: 1000px) {
+  .rectangle-parent10 {
+    padding-top: var(--padding-xl);
+    padding-bottom: 84px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 975px) {
+  .email,
+  .password {
+    font-size: var(--font-size-7xl);
+  }
+  .login {
+    padding-left: 278px;
+    padding-right: 86px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 725px) {
+  .email-field-parent,
+  .frame-parent20 {
+    gap: var(--gap-mid);
+  }
+  .login-form-container {
+    gap: 45px;
+  }
+  .rectangle-parent10 {
+    gap: 33px;
+    padding-bottom: var(--padding-36xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .email,
+  .password,
+  .remember-my-preference {
+    font-size: var(--font-size-lgi);
+  }
+  .remember-me-checkbox-parent {
+    flex-wrap: wrap;
+  }
+  .forgot-password2 {
+    font-size: var(--font-size-lgi);
+  }
+  .login-form-container {
+    gap: var(--gap-3xl);
+  }
+  .rectangle-parent10 {
+    gap: var(--gap-mid);
+  }
+  .login {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

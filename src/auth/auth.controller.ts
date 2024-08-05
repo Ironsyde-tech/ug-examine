@@ -99,9 +99,5 @@ export class AuthController {
 
 
 
-  @Get('login')
-  @Render('auth/login')
-  root() {
-    return { message: 'Hello world!' };
-  }
+  
 }

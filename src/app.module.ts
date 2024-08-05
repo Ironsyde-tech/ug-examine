@@ -38,6 +38,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { CaslModule } from './casl/casl.module';
 import { AdminUserInitializer } from './admin-user-initializer.provider';
+import { UiModule } from './ui/ui.module';
 
 @Module({
   imports: [
@@ -60,6 +61,7 @@ import { AdminUserInitializer } from './admin-user-initializer.provider';
     TicketsModule,
     AuthModule,
     UsersModule,
+    UiModule,
   ],
   controllers: [AppController],
   providers: [AppService, AdminUserInitializer],

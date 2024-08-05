@@ -449,13 +449,6 @@ paths:
                     type: string
       tags: &ref_10
         - auth
-    get:
-      operationId: AuthController_root
-      parameters: []
-      responses:
-        '200':
-          description: ''
-      tags: *ref_10
   /auth/register:
     post:
       operationId: AuthController_signUp
@@ -571,6 +564,62 @@ paths:
       tags: *ref_10
       security:
         - Authorization: []
+  /ui:
+    get:
+      operationId: UiController_home
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  /ui/courses:
+    get:
+      operationId: UiController_courses
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  /ui/allocations:
+    get:
+      operationId: UiController_allocationsPage
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  /ui/auth/login:
+    get:
+      operationId: UiController_login
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  /ui/auth/forgot-password:
+    get:
+      operationId: UiController_forgotPassword
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  /ui/auth/otp:
+    get:
+      operationId: UiController_otp
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  /ui/lecturers:
+    get:
+      operationId: UiController_lecturers
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  /ui/tickets:
+    get:
+      operationId: UiController_viewTickets
+      parameters: []
+      responses:
+        '200':
+          description: ''
 info:
   title: UG Examine
   description: UG Examine API description
