@@ -8,6 +8,26 @@ export class UiController {
         return { message: 'Hello world!' };
     }
 
+
+    @Get('/submit ticket')
+    @Render('submit ticket/submit ticket')
+    submit() {
+        return { message: 'Hello world!' };
+    }
+
+    @Get('/homepage')
+    @Render('homepage/homepage')
+    homepage() {
+        return { message: 'Hello world!' };
+    }
+
+
+    @Get('/timetable')
+    @Render('timetable/timetable')
+    timetable() {
+        return { message: 'Hello world!',name: "kwame" };
+    }
+
     @Get('/courses')
     @Render('courses/index')
     courses() {

@@ -571,6 +571,27 @@ paths:
       responses:
         '200':
           description: ''
+  /ui/submit ticket:
+    get:
+      operationId: UiController_submit
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  /ui/homepage:
+    get:
+      operationId: UiController_homepage
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  /ui/timetable:
+    get:
+      operationId: UiController_timetable
+      parameters: []
+      responses:
+        '200':
+          description: ''
   /ui/courses:
     get:
       operationId: UiController_courses
