@@ -74,7 +74,7 @@
             </div>
           </div>
           <div class="login-form-container-inner">
-            <button class="vector-container">
+            <button id="loginButton" class="vector-container">
               <img
                 class="frame-child24"
                 alt=""
@@ -97,10 +97,10 @@
     </div>
 
     <script>
-      var loginContainer = document.getElementById("loginContainer");
-      if (loginContainer) {
-        loginContainer.addEventListener("click", function (e) {
-          window.location.href = "./forgot-password.html";
+      var loginButton = document.getElementById("loginButton");
+      if (loginButton) {
+        loginButton.addEventListener("click", function (e) {
+          window.location.href = "/ui/timetable";
         });
       }
       </script>
