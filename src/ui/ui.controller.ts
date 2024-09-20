@@ -31,7 +31,9 @@ export class UiController {
     @Get('/courses')
     @Render('courses/index')
     courses() {
-        return { message: 'Hello world!', name: "kwame" };
+        return { message: 'Hello world!', name: "kwame", courses: [
+            { code: 'DCIT 104', name: 'Programming', studyPeriod: 'Level 100 - Second Semester', academicCredits: 3 },
+        ] };
     }
 
     @Get('/allocations')
