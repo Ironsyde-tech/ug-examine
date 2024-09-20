@@ -4,6 +4,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { writeFileSync } from 'fs';
 
 import { AppModule } from './app.module';
+import * as hbs from 'hbs';
 import { join } from 'path';
 
 async function bootstrap() {
@@ -15,6 +16,12 @@ async function bootstrap() {
 
   (app as any).useStaticAssets(join(__dirname, '..', 'public'));
   (app as any).setBaseViewsDir(join(__dirname, '..', 'views'));
+  
+  hbs.registerPartials(join(__dirname, '..', '/views/partials'));
+  // hbs.registerHelper('lower', function (aString) {
+  //   return aString.toLowerCase()
+  // })
+
   (app as any).setViewEngine('hbs');
 
 

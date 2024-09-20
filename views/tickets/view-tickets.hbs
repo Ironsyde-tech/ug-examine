@@ -1,436 +1,254 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/view-tickets.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Trykker:wght@400&display=swap"
-    />
-  </head>
-  <body>
-    <div class="view-tickets">
-      <div class="view-tickets-child"></div>
-      <div class="view-tickets-item"></div>
-      <div class="view-tickets-inner"></div>
-      <div class="view-tickets-child1"></div>
-      <div class="rectangle-parent29">
-        <div class="frame-child54"></div>
-        <div class="frame-wrapper22">
-          <div class="frame-parent33">
-            <div class="frame-wrapper23">
-              <div class="oxfordtrans-1-container">
-                <img
-                  class="oxfordtrans-1-icon4"
-                  loading="lazy"
-                  alt=""
-                  src="/img/oxfordtrans-1@2x.png"
-                />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-                <div class="frame-wrapper24">
-                  <div class="menu-option-parent">
-                    <div class="menu-option"></div>
-                    <div class="menu-option1"></div>
-                    <div class="menu-option2"></div>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/view-tickets.css" />
+  <link rel="stylesheet" href="/css/timetable.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Trykker:wght@400&display=swap" />
+</head>
+
+<body>
+  <div class="view-tickets">
+    <div class="view-tickets-child"></div>
+    <div class="view-tickets-item"></div>
+    <div class="view-tickets-inner"></div>
+    <div class="view-tickets-child1"></div>
+    {{> sidebar}}
+    <section class="view-tickets-inner1">
+      <div class="frame-parent38">
+        <div class="frame-parent39">
+          <div class="rectangle-parent33">
+            <div class="frame-child61"></div>
+            <div class="tickets-wrapper1">
+              <h1 class="tickets5">Tickets</h1>
+            </div>
+            <div class="notification-1-1-container">
+              <img class="notification-1-14" loading="lazy" alt="" src="/img/notification-1-1@2x.png" />
+
+              <div class="message-1-frame">
+                <img class="message-1-icon4" loading="lazy" alt="" src="/img/message-1@2x.png" />
+              </div>
+            </div>
+          </div>
+          <div class="frame-parent40">
+            <div class="frame-wrapper27">
+              <div class="frame-wrapper28">
+                <div class="frame-wrapper29">
+                  <div class="ticket-details-wrapper">
+                    <div class="ticket-details">Ticket Details</div>
                   </div>
                 </div>
               </div>
             </div>
-            <h2 class="university-of-ghana4">University of Ghana</h2>
-          </div>
-        </div>
-        <div class="frame-parent34">
-          <div class="frame-parent35">
-            <div class="frame-wrapper25">
-              <div class="frame-parent36">
-                <div class="frame-wrapper26">
-                  <div class="profile-image-placeholder-parent">
-                    <div
-                      class="profile-image-placeholder"
-                      data-scroll-to="profileImagePlaceholder"
-                    ></div>
-                    <img
-                      class="profile-1-icon4"
-                      loading="lazy"
-                      alt=""
-                      src="/img/profile-1@2x.png"
-                    />
-
-                    <div class="hi-justice-container">
-                      <h2 class="hi-justice4" id="hiJusticeText">
-                        Hi, Justice
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="rectangle-parent30">
-                  <div class="frame-child55"></div>
-                  <img
-                    class="image-23-icon6"
-                    loading="lazy"
-                    alt=""
-                    src="/img/image-23@2x.png"
-                  />
-
-                  <div class="timetable-wrapper1">
-                    <h3 class="timetable7">Timetable</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="home-1-parent2">
-              <img class="home-1-icon4" alt="" src="/img/home-1@2x.png" />
-
-              <b class="home4">HOME</b>
-              <div class="frame-child56"></div>
-              <img
-                class="image-24-icon5"
-                alt=""
-                src="/img/image-241@2x.png"
-              />
-
-              <div class="courses-frame">
-                <b class="courses4">Courses</b>
-              </div>
-            </button>
-            <button class="frame-button">
-              <div class="frame-child57"></div>
-              <img
-                class="image-25-icon5"
-                alt=""
-                src="/img/image-251@2x.png"
-              />
-
-              <div class="lecturers-frame">
-                <b class="lecturers4">Lecturers</b>
-              </div>
-            </button>
-          </div>
-          <div class="frame-parent37">
-            <button class="home-6-parent2">
-              <div class="home-64"></div>
-              <div class="frame-child58"></div>
-              <img class="history-icon4" alt="" src="/img/history@2x.png" />
-
-              <div class="navigation-button-labels">
-                <b class="allocations5">Allocations</b>
-              </div>
-            </button>
-            <button class="rectangle-parent31">
-              <div class="frame-child59"></div>
-              <img
-                class="image-22-icon5"
-                alt=""
-                src="/img/image-22@2x.png"
-              />
-
-              <div class="tickets-frame">
-                <b class="tickets4">Tickets</b>
-              </div>
-            </button>
-          </div>
-        </div>
-        <div class="rectangle-parent32">
-          <div class="frame-child60"></div>
-          <img
-            class="image-20-icon5"
-            loading="lazy"
-            alt=""
-            src="/img/image-20@2x.png"
-          />
-
-          <div class="logout-frame">
-            <h3 class="logout4">Logout</h3>
-          </div>
-        </div>
-      </div>
-      <section class="view-tickets-inner1">
-        <div class="frame-parent38">
-          <div class="frame-parent39">
-            <div class="rectangle-parent33">
-              <div class="frame-child61"></div>
-              <div class="tickets-wrapper1">
-                <h1 class="tickets5">Tickets</h1>
-              </div>
-              <div class="notification-1-1-container">
-                <img
-                  class="notification-1-14"
-                  loading="lazy"
-                  alt=""
-                  src="/img/notification-1-1@2x.png"
-                />
-
-                <div class="message-1-frame">
-                  <img
-                    class="message-1-icon4"
-                    loading="lazy"
-                    alt=""
-                    src="/img/message-1@2x.png"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="frame-parent40">
-              <div class="frame-wrapper27">
-                <div class="frame-wrapper28">
-                  <div class="frame-wrapper29">
-                    <div class="ticket-details-wrapper">
-                      <div class="ticket-details">Ticket Details</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="frame-wrapper30">
-                <div class="filter-button-triplet-parent">
-                  <div class="filter-button-triplet">
-                    <div class="filter-button-triplet-child"></div>
-                    <h3 class="pending">Pending</h3>
-                    <div class="filter-button-triplet-inner">
-                      <div class="ticket-data-placeholder-parent">
-                        <b class="ticket-data-placeholder">83</b>
-                        <div class="empty-ticket-data">
-                          <b class="ticket-data">83</b>
-                          <div class="empty-ticket-placeholder">
-                            <b class="ticket-entry">83</b>
-                            <div class="empty-data">
-                              <b class="no-tickets-message">83</b>
-                              <b class="data-placeholder">83</b>
-                            </div>
+            <div class="frame-wrapper30">
+              <div class="filter-button-triplet-parent">
+                <div class="filter-button-triplet">
+                  <div class="filter-button-triplet-child"></div>
+                  <h3 class="pending">Pending</h3>
+                  <div class="filter-button-triplet-inner">
+                    <div class="ticket-data-placeholder-parent">
+                      <b class="ticket-data-placeholder">{{statistics.pending}}</b>
+                      <div class="empty-ticket-data">
+                        <b class="ticket-data">{{statistics.pending}}</b>
+                        <div class="empty-ticket-placeholder">
+                          <b class="ticket-entry">{{statistics.pending}}</b>
+                          <div class="empty-data">
+                            <b class="no-tickets-message">{{statistics.pending}}</b>
+                            <b class="data-placeholder">{{statistics.pending}}</b>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="filter-button-triplet1">
-                    <div class="filter-button-triplet-item"></div>
-                    <h3 class="open">Open</h3>
-                    <div class="wrapper15">
-                      <b class="b3">12</b>
-                    </div>
-                  </div>
-                  <div class="filter-button-triplet2">
-                    <div class="filter-button-triplet-child1"></div>
-                    <h3 class="closed">Closed</h3>
-                    <div class="wrapper16">
-                      <b class="b4">4</b>
-                    </div>
+                </div>
+                <div class="filter-button-triplet1">
+                  <div class="filter-button-triplet-item"></div>
+                  <h3 class="open">Open</h3>
+                  <div class="wrapper15">
+                    <b class="b3">{{statistics.open}}</b>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="frame-wrapper31">
-            <div class="table-2-parent">
-              <div class="table-2">
-                <div class="header-row-triplet-parent">
-                  <div class="header-row-triplet">
-                    <div class="header-cell-triplet">
-                      <div class="student-id">Student ID</div>
-                    </div>
-                    <div class="student-data">
-                      <div class="sample-data">10122934</div>
-                    </div>
-                    <div class="lecturer-data-triplet">
-                      <div class="lecturer-cell-triplet">
-                        <div class="lecturer-data">10147508</div>
-                      </div>
-                      <div class="additional-lecturer-data">
-                        <div class="more-lecturer-data">10164384</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="header-row-triplet1">
-                    <div class="frame98">
-                      <div class="student-names">Student Name(s)</div>
-                    </div>
-                    <div class="frame99">
-                      <div class="yu">-yu</div>
-                    </div>
-                    <div class="frame-parent41">
-                      <div class="frame100">
-                        <div class="div89">-</div>
-                      </div>
-                      <div class="frame101">
-                        <div class="div90">-</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="course-info-header">
-                    <div class="course-code-header-pair">
-                      <div class="course-code-cell-pair">
-                        <div class="course-code-labels">
-                          <div class="course-code3">Course Code</div>
-                        </div>
-                        <div class="d-c-i-t-course-headers">
-                          <div class="year2">Year</div>
-                        </div>
-                      </div>
-                      <div class="d-c-i-t-header-pair">
-                        <div class="d-c-i-t-cells">
-                          <div class="dcit-1022">DCIT 102</div>
-                        </div>
-                        <div class="empty-d-c-i-t-cell">
-                          <div class="empty-data-placeholder">2023</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="course-code-header-pair1">
-                      <div class="frame-parent42">
-                        <div class="frame102">
-                          <div class="dcit-2043">DCIT 204</div>
-                        </div>
-                        <div class="frame103">
-                          <div class="dcit-3023">DCIT 302</div>
-                        </div>
-                      </div>
-                      <div class="frame-parent43">
-                        <div class="frame104">
-                          <div class="div91">2023</div>
-                        </div>
-                        <div class="frame105">
-                          <div class="div92">2022</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="exam-info-header">
-                    <div class="exam-type-header-triplet">
-                      <div class="exam-type-cell-triplet">
-                        <div class="exam-type">Exam Type</div>
-                      </div>
-                      <div class="semester2">
-                        <div class="semester3">Semester</div>
-                      </div>
-                    </div>
-                    <div class="exam-type-header-triplet1">
-                      <div class="frame106">
-                        <div class="normal">Normal</div>
-                      </div>
-                      <div class="frame107">
-                        <div class="second10">Second</div>
-                      </div>
-                    </div>
-                    <div class="exam-type-header-triplet2">
-                      <div class="frame108">
-                        <div class="main-resit">Main Resit</div>
-                        <div class="normal-exam">
-                          <div class="normal1">Normal</div>
-                        </div>
-                      </div>
-                      <div class="frame109">
-                        <div class="second11">Second</div>
-                        <div class="second-semester-label">
-                          <div class="second12">Second</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="header-row-triplet2">
-                    <div class="frame110">
-                      <div class="lecturer-names">Lecturer Name(s)</div>
-                    </div>
-                    <div class="frame111">
-                      <div class="text8"></div>
-                    </div>
-                    <div class="frame-parent44">
-                      <div class="frame112">
-                        <div class="text9"></div>
-                      </div>
-                      <div class="frame113">
-                        <div class="text10"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="supplementary-resit">
-                  <div class="supplementary-resit-details">
-                    <div class="supplementary-resit-label">10156728</div>
-                  </div>
-                  <div class="frame114"></div>
-                  <div class="supplementary-resit-details1">
-                    <div class="second-resit">
-                      <div class="dcit-4123">DCIT 412</div>
-                    </div>
-                    <div class="second-resit1">
-                      <div class="second-resit-value">2020</div>
-                    </div>
-                  </div>
-                  <div class="supplementary-resit-details2">
-                    <div class="frame115">
-                      <div class="supplementary-resit1">
-                        Supplementary Resit
-                      </div>
-                    </div>
-                    <div class="frame116">
-                      <div class="second13">Second</div>
-                    </div>
-                  </div>
-                  <div class="supplementary-resit-details3">
-                    <div class="text11"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="ticket-status">
-                <div class="ticket-status-buttons">
-                  <div class="button-31">
-                    <div class="pending1">Pending</div>
-                  </div>
-                  <div class="button-41">
-                    <div class="open1">Open</div>
-                  </div>
-                  <div class="button-51">
-                    <div class="pending2">Pending</div>
-                  </div>
-                  <div class="button-61">
-                    <div class="closed1">Closed</div>
+                <div class="filter-button-triplet2">
+                  <div class="filter-button-triplet-child1"></div>
+                  <h3 class="closed">Closed</h3>
+                  <div class="wrapper16">
+                    <b class="b4">{{statistics.closed}}</b>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+        <div class="frame-wrapper31">
+          <div class="table-2-parent">
+            <div class="table-2">
+              <div class="header-row-triplet-parent">
+                <div class="header-row-triplet">
+                  <div class="header-cell-triplet">
+                    <div class="student-id">Student ID</div>
+                  </div>
+                  {{#each tickets}}
+                  <div class="student-data">
+                    <div class="sample-data">{{studentId}}</div>
+                  </div>
+                  {{/each}}
 
-    <script>
-      var hiJusticeText = document.getElementById("hiJusticeText");
-      if (hiJusticeText) {
-        hiJusticeText.addEventListener("click", function () {
-          var anchor = document.querySelector(
-            "[data-scroll-to='profileImagePlaceholder']"
-          );
-          if (anchor) {
-            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
-          }
-        });
-      }
-      </script>
-  </body>
+                  {{!-- <div class="lecturer-data-triplet">
+                    <div class="lecturer-cell-triplet">
+                      <div class="lecturer-data">10147508</div>
+                    </div>
+                    <div class="additional-lecturer-data">
+                      <div class="more-lecturer-data">10164384</div>
+                    </div>
+                  </div> --}}
+                </div>
+                <div class="header-row-triplet1">
+                  <div class="frame98">
+                    <div class="student-names">Student Name(s)</div>
+                  </div>
+                  {{#each tickets}}
+                  <div class="frame99">
+                    <div class="">{{name}}</div>
+                  </div>
+                  {{/each}}
+
+                  {{!-- <div class="frame-parent41">
+                    <div class="frame100">
+                      <div class="div89">-</div>
+                    </div>
+                    <div class="frame101">
+                      <div class="div90">-</div>
+                    </div>
+                  </div> --}}
+                </div>
+                <div class="course-info-header">
+                  <div class="course-code-header-pair">
+                    <div class="course-code-cell-pair">
+                      <div class="course-code-labels">
+                        <div class="course-code3">Course Code</div>
+                      </div>
+                      <div class="d-c-i-t-course-headers">
+                        <div class="year2">Year</div>
+                      </div>
+                    </div>
+                    {{#each tickets}}
+                    <div class="d-c-i-t-header-pair">
+                      <div class="d-c-i-t-cells">
+                        <div class="dcit-1022">{{courseCode}}</div>
+                      </div>
+                      <div class="empty-d-c-i-t-cell">
+                        <div class="empty-data-placeholder">{{year}}</div>
+                      </div>
+                    </div>
+                    {{/each}}
+
+                  </div>
+                  {{!-- <div class="course-code-header-pair1">
+                    <div class="frame-parent42">
+                      <div class="frame102">
+                        <div class="dcit-2043">DCIT 204</div>
+                      </div>
+                      <div class="frame103">
+                        <div class="dcit-3023">DCIT 302</div>
+                      </div>
+                    </div>
+                    <div class="frame-parent43">
+                      <div class="frame104">
+                        <div class="div91">2023</div>
+                      </div>
+                      <div class="frame105">
+                        <div class="div92">2022</div>
+                      </div>
+                    </div>
+                  </div> --}}
+                </div>
+                <div class="exam-info-header">
+                  <div class="exam-type-header-triplet">
+                    <div class="exam-type-cell-triplet">
+                      <div class="exam-type">Exam Type</div>
+                    </div>
+                    <div class="semester2">
+                      <div class="semester3">Semester</div>
+                    </div>
+                  </div>
+                  {{#each tickets}}
+                  <div class="exam-type-header-triplet1">
+                    <div class="frame106">
+                      <div class="normal">{{examType}}</div>
+                    </div>
+                    <div class="frame107">
+                      <div class="second10">{{semester}}</div>
+                    </div>
+                  </div>
+                  {{/each}}
+
+
+
+                </div>
+                <div class="header-row-triplet2">
+                  <div class="frame110">
+                    <div class="lecturer-names">Lecturer Name(s)</div>
+                  </div>
+                  {{#each tickets}}
+                  <div class="frame111">
+                    <div class="text8">{{lecturerName}}</div>
+                  </div>
+                  {{/each}}
+                  
+                </div>
+              </div>
+              
+            </div>
+            <div class="ticket-status">
+              <div class="ticket-status-buttons">
+                {{#each tickets}}
+                <div class="button-31">
+                  <div class="{{status}}1">{{status}}</div>
+                </div>
+                {{/each}}
+                {{!-- <div class="button-31">
+                  <div class="pending1">Pending</div>
+                </div>
+                <div class="button-41">
+                  <div class="open1">Open</div>
+                </div>
+                <div class="button-51">
+                  <div class="pending2">Pending</div>
+                </div>
+                <div class="button-61">
+                  <div class="closed1">Closed</div>
+                </div> --}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    var hiJusticeText = document.getElementById("hiJusticeText");
+    if (hiJusticeText) {
+      hiJusticeText.addEventListener("click", function () {
+        var anchor = document.querySelector(
+          "[data-scroll-to='profileImagePlaceholder']"
+        );
+        if (anchor) {
+          anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+        }
+      });
+    }
+  </script>
+</body>
+
 </html>
