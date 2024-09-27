@@ -52,10 +52,10 @@
             <div class="email-field-parent">
               <div class="email-field">
                 <div class="email-input1">
-                  <div class="email">Email</div>
+                  <div id="email" class="email">Email</div>
                 </div>
                 <div class="email-field-child"></div>
-                <div class="password">Password</div>
+                <div id="password" class="password">Password</div>
               </div>
               <div class="frame-child23"></div>
             </div>
@@ -100,7 +100,30 @@
       var loginButton = document.getElementById("loginButton");
       if (loginButton) {
         loginButton.addEventListener("click", function (e) {
-          window.location.href = "/ui/timetable";
+          const myHeaders = new Headers();
+          myHeaders.append("accept", "application/json");
+          myHeaders.append("Content-Type", "application/json");
+
+          const raw = JSON.stringify({
+            "username": document.getElementById('email').value,
+            "password": document.getElementById('password').value
+          });
+
+          const requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow"
+          };
+
+          fetch("http://197.255.122.208:8080/auth/login", requestOptions)
+            .then((response) => response.json())
+            .then((result) => {
+              console.log(result);
+              {{!-- window.location.href = "/ui/timetable"; --}}
+            })
+            .catch((error) => console.error(error));
+          
         });
       }
       </script>
