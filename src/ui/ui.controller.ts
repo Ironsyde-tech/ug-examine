@@ -28,9 +28,9 @@ export class UiController {
     @Get('/timetable')
     @Render('timetable/timetable')
     timetable() {
-        this.apiService.listAllocations().subscribe((res) => {
-            console.log(res)
-        });
+        // this.apiService.listAllocations().subscribe((res) => {
+        //     console.log(res)
+        // });
         return { message: 'Hello world!', name: "kwame" };
     }
 
@@ -75,26 +75,27 @@ export class UiController {
     @Get('/tickets')
     @Render('tickets/view-tickets')
     async viewTickets() {
-        const [tickets] = await Promise.all([
-            new Promise((resolve, reject) => {
-                this.apiService.listTickets().subscribe((res) => {
-                    console.log(res)
-                })
-            })
+        const [statistics] = await Promise.all([
+            // new Promise((resolve, reject) => {
+            //     this.apiService.listTickets().subscribe((res) => {
+            //         console.log(res)
+            //     })
+            // }),
+            this.apiService.getTicketStats()
         ]);
 
-        // [
-        //     { studentId: 10122934, name: 'Kwame 1', courseCode: 'DCIT 102', year: '2023', examType: 'Normal', semester: 'Second', lecturerName: 'Dr Pyne 1', status: 'Pending', lowerStatus: 'pending' },
-        //     { studentId: 10147508, name: 'Kwame 2', courseCode: 'DCIT 204', year: '2023', examType: 'Main', semester: 'Second', lecturerName: 'Dr Pyne 2', status: 'Open', lowerStatus: 'open' },
-        //     { studentId: 10164384, name: 'Kwame 3', courseCode: 'DCIT 302', year: '2022', examType: 'Normal', semester: 'Second', lecturerName: 'Dr Pyne 3', status: 'Pending', lowerStatus: 'pending' },
-        //     { studentId: 10156728, name: 'Kwame 4', courseCode: 'DCIT 412', year: '2020', examType: 'Supplementary Resit', semester: 'Second', lecturerName: 'Dr Pyne 4', status: 'Closed', lowerStatus: 'closed' },
-        // ]
+        const tickets = [
+            { studentId: 10122934, name: 'Kwame 1', courseCode: 'DCIT 102', year: '2023', examType: 'Normal', semester: 'Second', lecturerName: 'Dr Pyne 1', status: 'Pending', lowerStatus: 'pending' },
+            { studentId: 10147508, name: 'Kwame 2', courseCode: 'DCIT 204', year: '2023', examType: 'Main', semester: 'Second', lecturerName: 'Dr Pyne 2', status: 'Open', lowerStatus: 'open' },
+            { studentId: 10164384, name: 'Kwame 3', courseCode: 'DCIT 302', year: '2022', examType: 'Normal', semester: 'Second', lecturerName: 'Dr Pyne 3', status: 'Pending', lowerStatus: 'pending' },
+            { studentId: 10156728, name: 'Kwame 4', courseCode: 'DCIT 412', year: '2020', examType: 'Supplementary Resit', semester: 'Second', lecturerName: 'Dr Pyne 4', status: 'Closed', lowerStatus: 'closed' },
+        ]
         
         return {
             message: 'Hello world!',
-            name: "kwame",
+            name: "Alex",
             tickets,
-            statistics: { pending: 84, open: 12, closed: 4 }
+            statistics
         };
     }
 }

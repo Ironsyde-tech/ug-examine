@@ -1,465 +1,402 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/timetable.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Trykker:wght@400&display=swap"
-    />
-  </head>
-  <body>
-    <div class="timetable2" id="timetableContainer">
-      <div class="timetable-child"></div>
-      <div class="timetable-item"></div>
-      <div class="timetable-inner"></div>
-      {{> sidebar}}
-      <main class="content">
-        <section class="frame-section">
-          <header class="frame-header">
-            <div class="rectangle-parent8">
-              <div class="frame-child19"></div>
-              <div class="timetable-container">
-                <h1 class="timetable4">Timetable</h1>
-              </div>
-              <div class="notification-message-parent">
-                <img
-                  class="notification-1-11"
-                  loading="lazy"
-                  alt=""
-                  src="/img/notification-1-1@2x.png"
-                />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-                <div class="message-parent">
-                  <img
-                    class="message-1-icon1"
-                    loading="lazy"
-                    alt=""
-                    src="/img/message-1@2x.png"
-                  />
-                </div>
-              </div>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/timetable.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Trykker:wght@400&display=swap" />
+  <script src="/js/api.js"></script>
+</head>
+
+<body>
+  <div class="timetable2" id="timetableContainer">
+    <div class="timetable-child"></div>
+    <div class="timetable-item"></div>
+    <div class="timetable-inner"></div>
+    {{> sidebar}}
+    <main class="content">
+      <section class="frame-section">
+        <header class="frame-header">
+          <div class="rectangle-parent8">
+            <div class="frame-child19"></div>
+            <div class="timetable-container">
+              <h1 class="timetable4">Timetable</h1>
             </div>
-          </header>
-          <div class="calendar-parent">
-            <div class="frame-parent2">
-              <div class="container-53-parent">
-                <div class="container-53">
-                  <div class="calendar-month-parent-parent">
-                    <div class="calendar-month-parent">
-                      <div class="container-50">
-                        <div class="august-parent">
-                          <b class="august-2024">August 2024</b>
-                          <div class="calendar-days-name-parent">
-                            <div class="sun-parent">
-                              <div class="sun">SUN</div>
-                              <div class="mon-wrapper">
-                                <div class="mon">MON</div>
-                              </div>
-                              <div class="tue-wrapper">
-                                <div class="tue">TUE</div>
-                              </div>
-                              <div class="wed">WED</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="calendar-today-button-parent">
-                          <div class="container-45-wrapper">
-                            <div class="container-45">
-                              <div class="sub-calendar-today-button-cont">
-                                <div class="button-7">
-                                  <div class="div14">&gt;</div>
-                                </div>
-                              </div>
-                              <div class="button-4">
-                                <div class="today">today</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="calendar-weekend-parent">
-                            <div class="thursday-parent">
-                              <div class="thu">THU</div>
-                            </div>
-                            <div class="fri">FRI</div>
-                            <div class="sat">SAT</div>
-                          </div>
-                        </div>
-                        <div class="container-38">
-                          <div class="div15">2</div>
-                        </div>
-                        <input
-                          class="container-36"
-                          placeholder="1"
-                          type="text"
-                        />
-                      </div>
-                      <div class="container-37">
-                        <div class="calendar-day-parent">29</div>
-                      </div>
-                      <div class="container-34">
-                        <div class="div16">28</div>
-                      </div>
-                      <div class="container-35">
-                        <div class="div17">30</div>
-                      </div>
-                      <div class="calendar-days-parent">10</div>
-                      <div class="container-8">
-                        <div class="div18">9</div>
-                      </div>
-                      <div class="container-25">
-                        <div class="container-39">
-                          <div class="div19">7</div>
-                        </div>
-                      </div>
-                      <div class="calendar-days-parent1">5</div>
-                      <div class="calendar-days-parent2">4</div>
-                      <div class="calendar-days-parent3">31</div>
-                      <div class="calendar-days-parent4">3</div>
-                      <div class="calendar-days-parent5">8</div>
-                      <div class="calendar-days-parent6">6</div>
-                    </div>
-                    <div class="frame-parent3">
-                      <div class="frame-parent4">
-                        <div class="parent">
-                          <div class="div20">11</div>
-                          <div class="div21">12</div>
-                        </div>
-                        <div class="group">
-                          <div class="div22">18</div>
-                          <div class="div23">19</div>
-                        </div>
-                      </div>
-                      <div class="frame-parent5">
-                        <div class="container">
-                          <div class="div24">13</div>
-                          <div class="div25">20</div>
-                        </div>
-                        <div class="frame-parent6">
-                          <div class="wrapper">
-                            <div class="div26">14</div>
-                          </div>
-                          <div class="div27">21</div>
-                        </div>
-                      </div>
-                      <div class="frame-parent7">
-                        <div class="frame-parent8">
-                          <div class="parent1">
-                            <div class="div28">15</div>
-                            <div class="div29">16</div>
-                          </div>
-                          <div class="parent2">
-                            <div class="div30">22</div>
-                            <div class="div31">23</div>
-                          </div>
-                        </div>
-                        <div class="container-24-parent">
-                          <div class="container-24">
-                            <div class="link-container">17</div>
-                          </div>
-                          <div class="wrapper1">
-                            <div class="div32">24</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container-26-parent">
-                    <div class="container-26">
-                      <div class="quick-link-items">25</div>
-                    </div>
-                    <div class="wrapper2">
-                      <div class="div33">26</div>
-                    </div>
-                    <div class="wrapper3">
-                      <div class="div34">27</div>
-                    </div>
-                    <div class="wrapper4">
-                      <div class="div35">28</div>
-                    </div>
-                    <div class="wrapper5">
-                      <div class="div36">29</div>
-                    </div>
-                    <div class="parent3">
-                      <div class="div37">303</div>
-                      <div class="container-30">
-                        <div class="quick-link-element">31</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="links">
-                  <div class="container-49">
-                    <div class="quick-links-header">
-                      <h3 class="quick-links">QUICK LINKS</h3>
-                    </div>
-                    <div class="quick-links-actions">
-                      <div class="button-2">
-                        <a class="add-allocations">ADD ALLOCATIONS</a>
-                      </div>
-                      <div class="button-3">
-                        <a class="send-all-notifications"
-                          >SEND ALL NOTIFICATIONS</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="wrapper6">
-                <b class="b2">2</b>
+            <div class="notification-message-parent">
+              <img class="notification-1-11" loading="lazy" alt="" src="/img/notification-1-1@2x.png" />
+
+              <div class="message-parent">
+                <img class="message-1-icon1" loading="lazy" alt="" src="/img/message-1@2x.png" />
               </div>
             </div>
           </div>
-          <footer class="allocations-content-wrapper">
-            <div class="allocations-content">
-              <div class="allocations-header">
-                <div class="allocations-9th">
-                  Allocations - 9th August, 2024
+        </header>
+        <div class="calendar-parent">
+          <div class="frame-parent2">
+            <div class="container-53-parent">
+              <div class="container-53">
+                <div class="calendar-month-parent-parent">
+                  <div class="calendar-month-parent">
+                    <div class="container-50">
+                      <div class="august-parent">
+                        <b class="august-2024">August 2024</b>
+                        <div class="calendar-days-name-parent">
+                          <div class="sun-parent">
+                            <div class="sun">SUN</div>
+                            <div class="mon-wrapper">
+                              <div class="mon">MON</div>
+                            </div>
+                            <div class="tue-wrapper">
+                              <div class="tue">TUE</div>
+                            </div>
+                            <div class="wed">WED</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calendar-today-button-parent">
+                        <div class="container-45-wrapper">
+                          <div class="container-45">
+                            <div class="sub-calendar-today-button-cont">
+                              <div class="button-7">
+                                <div class="div14">&gt;</div>
+                              </div>
+                            </div>
+                            <div class="button-4">
+                              <div class="today">today</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="calendar-weekend-parent">
+                          <div class="thursday-parent">
+                            <div class="thu">THU</div>
+                          </div>
+                          <div class="fri">FRI</div>
+                          <div class="sat">SAT</div>
+                        </div>
+                      </div>
+                      <div class="container-38">
+                        <div class="div15">2</div>
+                      </div>
+                      <input class="container-36" placeholder="1" type="text" />
+                    </div>
+                    <div class="container-37">
+                      <div class="calendar-day-parent">29</div>
+                    </div>
+                    <div class="container-34">
+                      <div class="div16">28</div>
+                    </div>
+                    <div class="container-35">
+                      <div class="div17">30</div>
+                    </div>
+                    <div class="calendar-days-parent">10</div>
+                    <div class="container-8">
+                      <div class="div18">9</div>
+                    </div>
+                    <div class="container-25">
+                      <div class="container-39">
+                        <div class="div19">7</div>
+                      </div>
+                    </div>
+                    <div class="calendar-days-parent1">5</div>
+                    <div class="calendar-days-parent2">4</div>
+                    <div class="calendar-days-parent3">31</div>
+                    <div class="calendar-days-parent4">3</div>
+                    <div class="calendar-days-parent5">8</div>
+                    <div class="calendar-days-parent6">6</div>
+                  </div>
+                  <div class="frame-parent3">
+                    <div class="frame-parent4">
+                      <div class="parent">
+                        <div class="div20">11</div>
+                        <div class="div21">12</div>
+                      </div>
+                      <div class="group">
+                        <div class="div22">18</div>
+                        <div class="div23">19</div>
+                      </div>
+                    </div>
+                    <div class="frame-parent5">
+                      <div class="container">
+                        <div class="div24">13</div>
+                        <div class="div25">20</div>
+                      </div>
+                      <div class="frame-parent6">
+                        <div class="wrapper">
+                          <div class="div26">14</div>
+                        </div>
+                        <div class="div27">21</div>
+                      </div>
+                    </div>
+                    <div class="frame-parent7">
+                      <div class="frame-parent8">
+                        <div class="parent1">
+                          <div class="div28">15</div>
+                          <div class="div29">16</div>
+                        </div>
+                        <div class="parent2">
+                          <div class="div30">22</div>
+                          <div class="div31">23</div>
+                        </div>
+                      </div>
+                      <div class="container-24-parent">
+                        <div class="container-24">
+                          <div class="link-container">17</div>
+                        </div>
+                        <div class="wrapper1">
+                          <div class="div32">24</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-26-parent">
+                  <div class="container-26">
+                    <div class="quick-link-items">25</div>
+                  </div>
+                  <div class="wrapper2">
+                    <div class="div33">26</div>
+                  </div>
+                  <div class="wrapper3">
+                    <div class="div34">27</div>
+                  </div>
+                  <div class="wrapper4">
+                    <div class="div35">28</div>
+                  </div>
+                  <div class="wrapper5">
+                    <div class="div36">29</div>
+                  </div>
+                  <div class="parent3">
+                    <div class="div37">303</div>
+                    <div class="container-30">
+                      <div class="quick-link-element">31</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="allocation-table">
-                <div class="container-54">
-                  <div class="table-header">
-                    <div class="table-columns">
-                      <div class="header-items">
-                        <div class="container-42">
-                          <div class="staff-id">Staff ID</div>
-                        </div>
-                      </div>
-                      <div class="course-code-column">
-                        <div class="container-43">
-                          <div class="course-code-header">
-                            <div class="course-code1">Course Code</div>
-                          </div>
-                          <img
-                            class="image-10-icon"
-                            loading="lazy"
-                            alt=""
-                            src="/img/image-10@2x.png"
-                          />
-                        </div>
-                      </div>
-                      <input
-                        class="header-items1"
-                        placeholder="Staff Name(s)"
-                        type="text"
-                      />
-
-                      <div class="year-column">
-                        <div class="container-7">
-                          <div class="year-header">
-                            <div class="year">Year</div>
-                          </div>
-                          <div class="year-sort">4</div>
-                        </div>
-                      </div>
-                      <div class="students-column">
-                        <div class="container-44">
-                          <div class="number-of-students">
-                            Number of Students
-                          </div>
-                          <div class="students-sort">
-                            <img
-                              class="image-6-icon"
-                              loading="lazy"
-                              alt=""
-                              src="/img/image-6@2x.png"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="container-40">
-                        <div class="mode-of-exams">Mode of Exams</div>
-                      </div>
-                      <div class="container-41">
-                        <div class="semester">Semester</div>
-                        <img
-                          class="image-2-icon"
-                          loading="lazy"
-                          alt=""
-                          src="/img/image-2@2x.png"
-                        />
-                      </div>
-                    </div>
+              <div class="links">
+                <div class="container-49">
+                  <div class="quick-links-header">
+                    <h3 class="quick-links">QUICK LINKS</h3>
                   </div>
-                  <div class="table-11">
-                    <div class="header1">
-                      <div class="row-items">
-                        <div class="department-codes">10122934, 10120093</div>
-                      </div>
-                      <div class="department-names">
-                        <div class="dcit-102">DCIT 102</div>
-                      </div>
-                      <div class="course-details">
-                        <div class="exam-types">
-                          <div class="exam-formats"></div>
-                        </div>
-                        <div class="exam-times">
-                          <div class="exam-locations">2024</div>
-                        </div>
-                      </div>
-                      <div class="exam-semesters">
-                        <div class="semester-numbers">
-                          <div class="semester-values">478</div>
-                        </div>
-                        <div class="exam-modes">
-                          <div class="online-onsite">Online/ Onsite</div>
-                        </div>
-                      </div>
-                      <div class="allocation-periods">
-                        <div class="second">Second</div>
-                      </div>
+                  <div class="quick-links-actions">
+                    <div class="button-2">
+                      <a class="add-allocations">ADD ALLOCATIONS</a>
                     </div>
-                    <div class="row">
-                      <div class="frame34">
-                        <div class="div38">10147508</div>
-                      </div>
-                      <div class="frame35">
-                        <div class="dcit-2041">DCIT 204</div>
-                      </div>
-                      <div class="frame-parent9">
-                        <div class="frame36">
-                          <div class="text"></div>
-                        </div>
-                        <div class="frame37">
-                          <div class="div39">2024</div>
-                        </div>
-                      </div>
-                      <div class="frame-parent10">
-                        <div class="frame38">
-                          <div class="div40">323</div>
-                        </div>
-                        <div class="frame39">
-                          <div class="written">Written</div>
-                        </div>
-                      </div>
-                      <div class="frame40">
-                        <div class="second1">Second</div>
-                      </div>
-                    </div>
-                    <div class="row1">
-                      <div class="frame41">
-                        <div class="div41">10164384</div>
-                      </div>
-                      <div class="frame42">
-                        <div class="dcit-3021">DCIT 302</div>
-                      </div>
-                      <div class="frame-parent11">
-                        <div class="frame43">
-                          <div class="text1"></div>
-                        </div>
-                        <div class="frame44">
-                          <div class="div42">2024</div>
-                        </div>
-                      </div>
-                      <div class="frame-parent12">
-                        <div class="frame45">
-                          <div class="div43">298</div>
-                        </div>
-                        <div class="frame46">
-                          <div class="written1">Written</div>
-                        </div>
-                      </div>
-                      <div class="frame47">
-                        <div class="second2">Second</div>
-                      </div>
-                    </div>
-                    <div class="row2">
-                      <div class="frame48">
-                        <div class="div44">10156728</div>
-                      </div>
-                      <div class="frame49">
-                        <div class="dcit-4121">DCIT 412</div>
-                      </div>
-                      <div class="frame-parent13">
-                        <div class="frame50">
-                          <div class="text2"></div>
-                        </div>
-                        <div class="frame51">
-                          <div class="div45">2024</div>
-                        </div>
-                      </div>
-                      <div class="frame-parent14">
-                        <div class="frame52">
-                          <div class="div46">167</div>
-                        </div>
-                        <div class="frame53">
-                          <div class="online-offsite">Online/ Offsite</div>
-                        </div>
-                      </div>
-                      <div class="frame54">
-                        <div class="second3">Second</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="notification-actions-wrapper">
-                  <div class="notification-actions">
-                    <div class="button-5">
-                      <div class="send-natfication">Send natfication</div>
-                    </div>
-                    <div class="container-51">
-                      <div class="send-noufication">Send noufication</div>
-                    </div>
-                    <div class="container-6">
-                      <div class="sond-notficaton">Sond notficaton</div>
-                    </div>
-                    <div class="button-6">
-                      <div class="send-notnication">Send notnication</div>
+                    <div class="button-3">
+                      <a class="send-all-notifications">SEND ALL NOTIFICATIONS</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </footer>
-        </section>
-      </main>
-    </div>
+            <div class="wrapper6">
+              <b class="b2">2</b>
+            </div>
+          </div>
+        </div>
+        <footer class="allocations-content-wrapper">
+          <div class="allocations-content">
+            <div class="allocations-header">
+              <div class="allocations-9th">
+                Allocations - 9th August, 2024
+              </div>
+            </div>
+            <div class="allocation-table">
+              <div class="container-54">
+                <div class="table-header">
+                  <div class="table-columns">
+                    <div class="header-items">
+                      <div class="container-42">
+                        <div class="staff-id">Staff ID</div>
+                      </div>
+                    </div>
+                    <div class="course-code-column">
+                      <div class="container-43">
+                        <div class="course-code-header">
+                          <div class="course-code1">Course Code</div>
+                        </div>
+                        <img class="image-10-icon" loading="lazy" alt="" src="/img/image-10@2x.png" />
+                      </div>
+                    </div>
+                    <input class="header-items1" placeholder="Staff Name(s)" type="text" />
 
-    <script>
-      var hiJusticeText = document.getElementById("hiJusticeText");
-      if (hiJusticeText) {
-        hiJusticeText.addEventListener("click", function () {
-          var anchor = document.querySelector("[data-scroll-to='userImage']");
-          if (anchor) {
-            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
-          }
-        });
-      }
-      
-      {{!-- var timetableContainer = document.getElementById("timetableContainer");
-      if (timetableContainer) {
-        timetableContainer.addEventListener("click", function (e) {
-          window.location.href = "./course-database.html";
-        });
-      } --}}
-      </script>
-  </body>
+                    <div class="year-column">
+                      <div class="container-7">
+                        <div class="year-header">
+                          <div class="year">Year</div>
+                        </div>
+                        <div class="year-sort">4</div>
+                      </div>
+                    </div>
+                    <div class="students-column">
+                      <div class="container-44">
+                        <div class="number-of-students">
+                          Number of Students
+                        </div>
+                        <div class="students-sort">
+                          <img class="image-6-icon" loading="lazy" alt="" src="/img/image-6@2x.png" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-40">
+                      <div class="mode-of-exams">Mode of Exams</div>
+                    </div>
+                    <div class="container-41">
+                      <div class="semester">Semester</div>
+                      <img class="image-2-icon" loading="lazy" alt="" src="/img/image-2@2x.png" />
+                    </div>
+                  </div>
+                </div>
+                <div class="table-11">
+                  <div class="header1">
+                    <div class="row-items">
+                      <div class="department-codes">10122934, 10120093</div>
+                    </div>
+                    <div class="department-names">
+                      <div class="dcit-102">DCIT 102</div>
+                    </div>
+                    <div class="course-details">
+                      <div class="exam-types">
+                        <div class="exam-formats"></div>
+                      </div>
+                      <div class="exam-times">
+                        <div class="exam-locations">2024</div>
+                      </div>
+                    </div>
+                    <div class="exam-semesters">
+                      <div class="semester-numbers">
+                        <div class="semester-values">478</div>
+                      </div>
+                      <div class="exam-modes">
+                        <div class="online-onsite">Online/ Onsite</div>
+                      </div>
+                    </div>
+                    <div class="allocation-periods">
+                      <div class="second">Second</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="frame34">
+                      <div class="div38">10147508</div>
+                    </div>
+                    <div class="frame35">
+                      <div class="dcit-2041">DCIT 204</div>
+                    </div>
+                    <div class="frame-parent9">
+                      <div class="frame36">
+                        <div class="text"></div>
+                      </div>
+                      <div class="frame37">
+                        <div class="div39">2024</div>
+                      </div>
+                    </div>
+                    <div class="frame-parent10">
+                      <div class="frame38">
+                        <div class="div40">323</div>
+                      </div>
+                      <div class="frame39">
+                        <div class="written">Written</div>
+                      </div>
+                    </div>
+                    <div class="frame40">
+                      <div class="second1">Second</div>
+                    </div>
+                  </div>
+                  <div class="row1">
+                    <div class="frame41">
+                      <div class="div41">10164384</div>
+                    </div>
+                    <div class="frame42">
+                      <div class="dcit-3021">DCIT 302</div>
+                    </div>
+                    <div class="frame-parent11">
+                      <div class="frame43">
+                        <div class="text1"></div>
+                      </div>
+                      <div class="frame44">
+                        <div class="div42">2024</div>
+                      </div>
+                    </div>
+                    <div class="frame-parent12">
+                      <div class="frame45">
+                        <div class="div43">298</div>
+                      </div>
+                      <div class="frame46">
+                        <div class="written1">Written</div>
+                      </div>
+                    </div>
+                    <div class="frame47">
+                      <div class="second2">Second</div>
+                    </div>
+                  </div>
+                  <div class="row2">
+                    <div class="frame48">
+                      <div class="div44">10156728</div>
+                    </div>
+                    <div class="frame49">
+                      <div class="dcit-4121">DCIT 412</div>
+                    </div>
+                    <div class="frame-parent13">
+                      <div class="frame50">
+                        <div class="text2"></div>
+                      </div>
+                      <div class="frame51">
+                        <div class="div45">2024</div>
+                      </div>
+                    </div>
+                    <div class="frame-parent14">
+                      <div class="frame52">
+                        <div class="div46">167</div>
+                      </div>
+                      <div class="frame53">
+                        <div class="online-offsite">Online/ Offsite</div>
+                      </div>
+                    </div>
+                    <div class="frame54">
+                      <div class="second3">Second</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="notification-actions-wrapper">
+                <div class="notification-actions">
+                  <div class="button-5">
+                    <div class="send-natfication">Send natfication</div>
+                  </div>
+                  <div class="container-51">
+                    <div class="send-noufication">Send noufication</div>
+                  </div>
+                  <div class="container-6">
+                    <div class="sond-notficaton">Sond notficaton</div>
+                  </div>
+                  <div class="button-6">
+                    <div class="send-notnication">Send notnication</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script>
+
+    listAllocations();
+    listTickets();
+    getTicketStats();
+
+  </script>
+</body>
+
 </html>

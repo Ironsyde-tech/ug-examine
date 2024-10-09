@@ -18,4 +18,8 @@ export class ApiService {
     listTickets(): Observable<AxiosResponse<any>> {
         return this.httpService.get(`${this.baseUrl}/tickets`);
     }
+
+    getTicketStats(): Promise<any> {
+        return Promise.resolve({ pending: 84, open: 12, closed: 4 });
+    }
 }
