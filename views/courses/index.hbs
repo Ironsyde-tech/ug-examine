@@ -15,9 +15,27 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Trykker:wght@400&display=swap" />
+
+  <!-- Remember to include jQuery :) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+  <!-- jQuery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 </head>
 
 <body>
+  <div id="add-new-entry" class="modal">
+    <p>Add new entry form goes here</p>
+    <a href="#" rel="modal:close">Close</a>
+  </div>
+
   <div class="course-database" id="courseDatabaseContainer">
     <div class="course-database-child"></div>
     <div class="course-database-item"></div>
@@ -60,7 +78,7 @@
                     </div>
                     <button class="group-button">
                       <div class="frame-child7"></div>
-                      <b class="add-new-entry">Add new entry ✚</b>
+                      <a href="#add-new-entry" rel="modal:open"> <b class="add-new-entry">Add new entry ✚</b></a>
                     </button>
                   </div>
                 </div>
@@ -120,7 +138,7 @@
                   </div>
                   <div class="header-cells1"></div>
                 </div> --}}
-               
+
                 {{!-- <div class="course-rows1">
                   <div class="frame">
                     <div class="level-200-">Level 200 - First Semester</div>
@@ -186,26 +204,7 @@
     </section>
   </div>
 
-  <script>
-    var hiJusticeText = document.getElementById("hiJusticeText");
-    if (hiJusticeText) {
-      hiJusticeText.addEventListener("click", function () {
-        var anchor = document.querySelector("[data-scroll-to='userAvatar']");
-        if (anchor) {
-          anchor.scrollIntoView({ block: "start", behavior: "smooth" });
-        }
-      });
-    }
-
-    {{!-- var courseDatabaseContainer = document.getElementById(
-      "courseDatabaseContainer"
-    );
-    if (courseDatabaseContainer) {
-      courseDatabaseContainer.addEventListener("click", function (e) {
-        window.location.href = "./lecturers-database.html";
-      });
-    } --}}
-  </script>
+  
 </body>
 
 </html>
