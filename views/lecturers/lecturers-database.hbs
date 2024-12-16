@@ -30,6 +30,164 @@
 <body>
   <div id="add-new-entry" class="modal">
     <p>Add new entry form goes here</p>
+
+<style>
+
+.input_DIV{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 0.1rem;
+    z-index: 10;
+}
+.input{
+   border-radius: 1rem;
+   height: 3rem;
+}
+
+.input_DIV label{
+  margin-top: 10px;
+
+}
+
+.course_title {
+    font-weight: 500;
+    background: #052169;
+    padding: 0.5rem;
+    border-radius: 50px;
+    font-size: 16px;
+    color: white;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    margin-top: -2rem;
+}
+.buttons{
+  width: 10rem !important;
+  padding: 0.5rem !important;
+  height: 3rem;
+  border-radius: 25px;
+  border: 10px solid white;
+}
+.buttons:hover{
+  cursor: pointer;
+}
+
+.cancel{
+  background: red !important;
+  text-decoration: none;
+  color: white;
+}
+.confirm{
+    background: #052169;
+    color: white;
+}
+
+{{!- --}}
+  
+</style>
+
+<body>
+  <div id="add-new-entry" class="modal">
+    <p> <div class="main-container">
+
+      <div class="rectangle">
+        <h6 class="couse_head" align="center">
+          <span class="course_title">ADD LECTURER</span>
+        </h6>
+
+          <div style="margin-top: 1rem;">
+          <div class="input_DIV">
+
+            <input type="text" class="input" id="course_code">
+
+            <Label for="course_code">Staff Name</Label>
+
+          </div>
+
+                    <div class="input_DIV">
+
+            <input type="text" class="input" id="course_name">
+
+            <Label for="course_name">Staff ID</Label>
+
+          </div>
+
+          <div class="input_DIV">
+
+            <input type="text" class="input" id="course_period">
+
+            <Label for="course_period">Email</Label>
+
+          </div>
+
+                    <div class="input_DIV">
+
+            <input type="text" class="input" id="course_period">
+
+            <Label for="course_period">Phone Number</Label>
+
+          </div>
+
+       <div class="input_DIV">
+
+            <input type="text" class="input" id="course_credits">
+
+            <Label for="course_credits">Department</Label>
+
+          </div>
+          </div>
+
+
+
+        <h6 class="rectangle-5" align="center" style="padding: 10px;">
+         {{!-- <a href="#" rel="modal:close" class="buttons cancel">CANCEL</a
+          > --}}
+          <button class="submit-button buttons confirm">SUBMIT</button>
+        </h6>
+      </div>
+
+
+      {{!-- <div class="rectangle">
+        <div class="flex-row">
+          <button class="rectangle-button"></button>
+          <div class="image"></div>
+          <span class="add-lecturer">ADD LECTURER </span>
+        </div>
+        <span class="staff-name">Staff Name</span>
+        <div class="rectangle-1"></div>
+        <div class="flex-row-2">
+          <span class="staff-id">Staff ID </span>
+          <div class="rectangle-3"></div>
+        </div>
+        <div class="flex-row-e">
+          <div class="rectangle-4"></div>
+          <span class="email">Email </span>
+        </div>
+        <div class="flex-row-cae">
+          <div class="rectangle-5"></div>
+          <span class="phone">Phone </span>
+        </div>
+        <div class="flex-row-f">
+          <span class="department">Department</span>
+          <div class="rectangle-6"></div>
+        </div>
+        <div class="rectangle-7">
+          <button class="cancel-button">CANCEL</button
+          ><button class="submit-button">SUBMIT</button>
+        </div>
+      </div> --}}
+      <div class="flex-column-f">
+        <div class="line"></div>
+        <div class="line-8"></div>
+        <div class="line-9"></div>
+        <div class="line-a"></div>
+        <div class="line-b"></div>
+        <div class="line-c"></div>
+      </div>
+      <span class="span"></span>
+    </div></p>
     <a href="#" rel="modal:close">Close</a>
   </div>
   <div class="lecturers-database" id="lecturersDatabaseContainer">
@@ -96,6 +254,10 @@
             </div>
           </div>
         </header>
+<<<<<<< HEAD
+=======
+        {{!-- I need the browser  --}}
+>>>>>>> 06df64b (Initial commit)
         <footer class="table-content">
           <div class="table">
             <div class="table-header1">
@@ -148,6 +310,7 @@
                 <input class="container-148" placeholder="0255363782" type="text" />
               </div>
               <div class="second-row">
+<<<<<<< HEAD
                 <div class="second-row-cells">
                   <div class="container-150">
                     <div class="abdul-azizdwumfour-abdullai">
@@ -173,6 +336,173 @@
                 </div>
               </div>
             </div>
+=======
+  <div class="second-row-cells">
+    <div class="container-150">
+      <div class="abdul-azizdwumfour-abdullai">
+        Abdul-Aziz,Dwumfour Abdullai
+      </div>
+    </div>
+    <div class="container-120">
+      <div class="div54">10256378</div>
+    </div>
+  </div>
+  <div class="container-135">
+    <div class="wrapper13">
+      <div class="div57">0277654452</div>
+    </div>
+  </div>
+</div>
+
+<div class="second-row">
+  <div class="second-row-cells">
+    <div class="container-150">
+      <div class="abdul-azizdwumfour-abdullai">
+        Appati, Justice
+      </div>
+    </div>
+    <div class="container-120">
+      <div class="div54">10238493</div>
+    </div>
+  </div>
+  <div class="container-135">
+    <div class="wrapper13">
+      <div class="div57">0245362273</div>
+    </div>
+  </div>
+</div>
+
+<div class="second-row">
+  <div class="second-row-cells">
+    <div class="container-150">
+      <div class="abdul-azizdwumfour-abdullai">
+        Benuwa,Ben-Bright
+      </div>
+    </div>
+    <div class="container-120">
+      <div class="div54">10236343</div>
+    </div>
+  </div>
+  <div class="container-135">
+    <div class="wrapper13">
+      <div class="div57">0274536728</div>
+    </div>
+  </div>
+</div>
+
+<div class="second-row">
+  <div class="second-row-cells">
+    <div class="container-150">
+      <div class="abdul-azizdwumfour-abdullai">
+        Boakye-SakyiPaul
+      </div>
+    </div>
+    <div class="container-120">
+      <div class="div54">10122934</div>
+    </div>
+  </div>
+  <div class="container-135">
+    <div class="wrapper13">
+      <div class="div57">0552236813</div>
+    </div>
+  </div>
+</div>
+
+<div class="second-row">
+  <div class="second-row-cells">
+    <div class="container-150">
+      <div class="abdul-azizdwumfour-abdullai">
+        Ecklu, Joseph Kobla
+      </div>
+    </div>
+    <div class="container-120">
+      <div class="div54">10153425</div>
+    </div>
+  </div>
+  <div class="container-135">
+    <div class="wrapper13">
+      <div class="div57">0245271192</div>
+    </div>
+  </div>
+</div>
+
+<div class="second-row">
+  <div class="second-row-cells">
+    <div class="container-150">
+      <div class="abdul-azizdwumfour-abdullai">
+        Mensah Solomon
+      </div>
+    </div>
+    <div class="container-120">
+      <div class="div54">10147508</div>
+    </div>
+  </div>
+  <div class="container-135">
+    <div class="wrapper13">
+      <div class="div57">0557774834</div>
+    </div>
+  </div>
+</div>
+
+<div class="second-row">
+  <div class="second-row-cells">
+    <div class="container-150">
+      <div class="abdul-azizdwumfour-abdullai">
+        Owusu,Ebenenezer
+      </div>
+    </div>
+    <div class="container-120">
+      <div class="div54">10035467</div>
+    </div>
+  </div>
+  <div class="container-135">
+    <div class="wrapper13">
+      <div class="div57">0277764534</div>
+    </div>
+  </div>
+</div>
+
+<div class="second-row">
+  <div class="second-row-cells">
+    <div class="container-150">
+      <div class="abdul-azizdwumfour-abdullai">
+        Soli,Michael Agbo
+      </div>
+    </div>
+    <div class="container-120">
+      <div class="div54">10109876</div>
+    </div>
+  </div>
+  <div class="container-135">
+    <div class="wrapper13">
+      <div class="div57">0243452634</div>
+    </div>
+  </div>
+</div>
+
+<div class="second-row">
+  <div class="second-row-cells">
+    <div class="container-150">
+      <div class="abdul-azizdwumfour-abdullai">
+        Wiafe, Isaac
+      </div>
+    </div>
+    <div class="container-120">
+      <div class="div54">10120093</div>
+    </div>
+  </div>
+  <div class="container-135">
+    <div class="wrapper13">
+      <div class="div57">0545454206</div>
+    </div>
+  </div>
+</div>
+
+
+            </div>
+
+            {{!-- Departments --}}
+>>>>>>> 06df64b (Initial commit)
             <div class="department-row">
               <div class="container-165">
                 <div class="department">Department</div>
@@ -183,6 +513,7 @@
               <div class="container-176">
                 <div class="computer-science">Computer Science</div>
               </div>
+<<<<<<< HEAD
               <div class="container-166">
                 <div class="computer-science1">Computer Science</div>
                 <div class="computer-science2">Computer Science</div>
@@ -291,6 +622,43 @@
                     <div class="computer-science9">Computer Science</div>
                   </div>
                 </div>
+=======
+
+                 <div class="container-176">
+                <div class="computer-science">Computer Science</div>
+              </div>
+
+                 <div class="container-176">
+                <div class="computer-science">Computer Science</div>
+              </div>
+
+                <div class="container-176">
+                <div class="computer-science">Computer Science</div>
+              </div>
+
+              <div class="container-176">
+                <div class="computer-science">Computer Science</div>
+              </div>
+
+              <div class="container-176">
+                <div class="computer-science">Computer Science</div>
+              </div>
+
+              <div class="container-176">
+                <div class="computer-science">Computer Science</div>
+              </div>
+
+              <div class="container-176">
+                <div class="computer-science">Computer Science</div>
+              </div>
+
+              <div class="container-176">
+                <div class="computer-science">Computer Science</div>
+              </div>
+
+              <div class="container-176">
+                <div class="computer-science">Computer Science</div>
+>>>>>>> 06df64b (Initial commit)
               </div>
             </div>
           </div>

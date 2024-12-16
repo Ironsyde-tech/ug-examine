@@ -1,0 +1,315 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+.blocker{
+  z-index:1000 !important;
+}
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 709px;
+  height: 969px;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+.rectangle {
+  position: absolute;
+  width: 638px;
+  height: 902px;
+  top: 34px;
+  left: 35px;
+  background: #d1e2e9;
+  z-index: 10;
+  border-radius: 20px;
+}
+.flex-row-af {
+  position: relative;
+  width: 531px;
+  height: 77.118px;
+  margin: 13px 0 0 90px;
+  z-index: 15;
+}
+.rectangle-btn {
+  position: absolute;
+  width: 453px;
+  height: 56.824px;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  background: #042068;
+  border: none;
+  z-index: 13;
+  border-radius: 20px;
+}
+.image {
+  position: absolute;
+  width: 29px;
+  height: 30px;
+  top: 0;
+  left: 502px;
+  background: url(./assets/images/ecf5db18c491c376acd15772dd7da719e49e47c8.png)
+    no-repeat center;
+  background-size: contain;
+  z-index: 11;
+}
+.add-course {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 389px;
+  height: 63.926px;
+  top: 13.191px;
+  left: 81px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.727px;
+  text-align: left;
+  z-index: 15;
+}
+.course-code {
+  display: block;
+  position: relative;
+  height: 33px;
+  margin: 42.882px 0 0 45px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 33px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 18;
+}
+.rectangle-1 {
+  position: relative;
+  width: 394px;
+  height: 52px;
+  margin: 20px 0 0 45px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  z-index: 22;
+  border-radius: 50px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.course-name {
+  display: block;
+  position: relative;
+  height: 33px;
+  margin: 51px 0 0 45px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 33px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 19;
+}
+.rectangle-2 {
+  position: relative;
+  width: 394px;
+  height: 52px;
+  margin: 23px 0 0 45px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  z-index: 23;
+  border-radius: 50px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.study-period {
+  display: block;
+  position: relative;
+  height: 33px;
+  margin: 53px 0 0 45px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 33px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 20;
+}
+.rectangle-3 {
+  position: relative;
+  width: 394px;
+  height: 52px;
+  margin: 22px 0 0 45px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  z-index: 24;
+  border-radius: 50px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.academic-credits {
+  display: block;
+  position: relative;
+  height: 37px;
+  margin: 54px 0 0 45px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 35.097px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 21;
+}
+.rectangle-4 {
+  position: relative;
+  width: 394px;
+  height: 52px;
+  margin: 18px 0 0 39px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  z-index: 25;
+  border-radius: 50px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.rectangle-5 {
+  position: relative;
+  width: 547.5px;
+  height: 61px;
+  margin: 79.5px 0 0 39px;
+  background: url(./assets/images/54035959-2871-4da0-97ce-717cd1d2a1be.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 14;
+}
+.cancel-button {
+  position: absolute;
+  width: 170px;
+  height: 31.456px;
+  top: 13.5px;
+  left: 47px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 31.456px;
+  white-space: nowrap;
+  background: transparent;
+  border: none;
+  z-index: 16;
+}
+.submit-button {
+  position: absolute;
+  width: 170px;
+  height: 31.456px;
+  top: 13.5px;
+  left: 378px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 31.456px;
+  white-space: nowrap;
+  background: transparent;
+  border: none;
+  z-index: 17;
+}
+.flex-column {
+  position: absolute;
+  width: 69px;
+  height: 29px;
+  top: 93px;
+  left: 50%;
+  transform: translate(-758.7%, 0);
+  z-index: 8;
+}
+.line {
+  position: relative;
+  width: 49px;
+  margin: 0 0 0 20px;
+  background: url(./assets/images/58437700-6525-4e8f-8a13-37a610a27781.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 1;
+}
+.line-6 {
+  position: relative;
+  width: 49px;
+  margin: 3px 0 0 0;
+  background: url(./assets/images/32b5117a-4274-4bef-b803-001fbf9956cc.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 6;
+}
+.line-7 {
+  position: relative;
+  width: 49px;
+  margin: 9px 0 0 20px;
+  background: url(./assets/images/b5d39afb-9f63-4797-91af-627b4f366a03.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 2;
+}
+.line-8 {
+  position: relative;
+  width: 49px;
+  margin: 3px 0 0 0;
+  background: url(./assets/images/34d1ba52-863c-49c4-98b7-c31426e59894.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 7;
+}
+.line-9 {
+  position: relative;
+  width: 38px;
+  margin: 11px 0 0 20px;
+  background: url(./assets/images/cfbe405a-eab7-47d6-996f-6c1ebc5973fc.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 3;
+}
+.line-a {
+  position: relative;
+  width: 38px;
+  margin: 3px 0 0 0;
+  background: url(./assets/images/14303ed0-ffff-4f87-a076-0e80fddb6dcd.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 8;
+}
+.text-2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 6px;
+  height: 13px;
+  top: 553px;
+  left: 1677px;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12.6px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 4;
+}
