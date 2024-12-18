@@ -5,8 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-  <link rel="stylesheet" href="/css/global.css" />
-  <link rel="stylesheet" href="/css/timetable.css" />
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@600;700&display=swap" />
@@ -14,154 +13,158 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Trykker:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
 
-  <!-- Remember to include jQuery :) -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-
-  <!-- jQuery Modal -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-  <script src="/js/api.js"></script>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/timetable.css" />
+
+  <style>
+    .input_DIV {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      margin-top: 0.1rem;
+      z-index: 10;
+    }
+
+    .input {
+      border-radius: 1rem;
+      height: 3rem;
+    }
+
+    .input_DIV label {
+      margin-top: 10px;
+
+    }
+
+    .course_title {
+      font-weight: 500;
+      background: #052169;
+      padding: 0.5rem;
+      border-radius: 50px;
+      font-size: 16px;
+      color: white;
+      width: 50%;
+      left: 25%;
+      right: 25%;
+      margin-top: -2rem;
+    }
+
+    .buttons {
+      width: 10rem !important;
+      padding: 0.5rem !important;
+      height: 3rem;
+      border-radius: 25px;
+      border: 10px solid white;
+    }
+
+    .buttons:hover {
+      cursor: pointer;
+    }
+
+    .cancel {
+      background: red !important;
+      text-decoration: none;
+      color: white;
+    }
+
+    .confirm {
+      background: #052169;
+      color: white;
+    }
+
+      {
+        {
+        !- --
+      }
+    }
+  </style>
+
 </head>
 
-<body>
-  <div id="add-allocations" class="modal">
-    <p>Add allocation form goes here</p>
-<style>
 
-.input_DIV{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px;
-  margin-top: 0.1rem;
-    z-index: 10;
-}
-.input{
-   border-radius: 1rem;
-   height: 3rem;
-}
-
-.input_DIV label{
-  margin-top: 10px;
-
-}
-
-.course_title {
-    font-weight: 500;
-    background: #052169;
-    padding: 0.5rem;
-    border-radius: 50px;
-    font-size: 16px;
-    color: white;
-    width: 50%;
-    left: 25%;
-    right: 25%;
-    margin-top: -2rem;
-}
-.buttons{
-  width: 10rem !important;
-  padding: 0.5rem !important;
-  height: 3rem;
-  border-radius: 25px;
-  border: 10px solid white;
-}
-.buttons:hover{
-  cursor: pointer;
-}
-
-.cancel{
-  background: red !important;
-  text-decoration: none;
-  color: white;
-}
-.confirm{
-    background: #052169;
-    color: white;
-}
-
-{{!- --}}
-  
-</style>
 
 <body>
   <div id="add-allocations" class="modal">
-      <div class="rectangle">
-        <h6 class="couse_head" align="center">
-          <span class="course_title">ADD ALLOCATIONS</span>
-        </h6>
+    <div class="rectangle">
+      <h6 class="couse_head" align="center">
+        <span class="course_title">ADD ALLOCATIONS</span>
+      </h6>
 
-          <div style="margin-top: 1rem;">
-          <div class="input_DIV">
+      <div style="margin-top: 1rem;">
+        <div class="input_DIV">
 
-            <input type="text" class="input" id="course_code">
+          <input type="text" class="input" id="course_code">
 
-            <Label for="course_code">Staff ID</Label>
+          <Label for="course_code">Staff ID</Label>
 
-          </div>
+        </div>
 
-                    <div class="input_DIV">
+        <div class="input_DIV">
 
-            <input type="text" class="input" id="course_name">
+          <input type="text" class="input" id="course_name">
 
-            <Label for="course_name">Course Code</Label>
+          <Label for="course_name">Course Code</Label>
 
-          </div>
+        </div>
 
-          <div class="input_DIV">
+        <div class="input_DIV">
 
-            <input type="text" class="input" id="course_period">
+          <input type="text" class="input" id="course_period">
 
-            <Label for="course_period">Staff Name</Label>
+          <Label for="course_period">Staff Name</Label>
 
-          </div>
+        </div>
 
-                    <div class="input_DIV">
+        <div class="input_DIV">
 
-            <input type="text" class="input" id="course_period">
+          <input type="text" class="input" id="course_period">
 
-            <Label for="course_period">Year</Label>
+          <Label for="course_period">Year</Label>
 
-          </div>
+        </div>
 
-          <div class="input_DIV">
+        <div class="input_DIV">
 
-            <input type="text" class="input" id="course_period">
+          <input type="text" class="input" id="course_period">
 
-            <Label for="course_period">Nº of Students</Label>
+          <Label for="course_period">Nº of Students</Label>
 
-          </div>
-
-
-
-          <div class="input_DIV">
-
-            <input type="text" class="input" id="course_period">
-
-            <Label for="course_period">Mode of Exam</Label>
-
-          </div>
-
-       <div class="input_DIV">
-
-            <input type="text" class="input" id="course_credits">
-
-            <Label for="course_credits">Semester</Label>
-
-          </div>
-          </div>
+        </div>
 
 
 
-        <h6 class="rectangle-5" align="center" style="padding: 10px;">
-         {{!-- <a href="#" rel="modal:close" class="buttons cancel">CANCEL</a
-          > --}}
-          <button class="submit-button buttons confirm">SUBMIT</button>
-        </h6>
+        <div class="input_DIV">
+
+          <input type="text" class="input" id="course_period">
+
+          <Label for="course_period">Mode of Exam</Label>
+
+        </div>
+
+        <div class="input_DIV">
+
+          <input type="text" class="input" id="course_credits">
+
+          <Label for="course_credits">Semester</Label>
+
+        </div>
       </div>
+
+
+
+      <h6 class="rectangle-5" align="center" style="padding: 10px;">
+        {{!-- <a href="#" rel="modal:close" class="buttons cancel">CANCEL</a> --}}
+        <button class="submit-button buttons confirm">SUBMIT</button>
+      </h6>
+    </div>
 
 
     <a href="#" rel="modal:close">Close</a>
@@ -540,24 +543,26 @@
     </main>
   </div>
 
+
+  <script src="/js/api.js"></script>
   <script>
 
     listAllocations();
     listTickets();
     getTicketStats();
 
-    
+
 
     document
-        .getElementById('send-all-notifications')
-        .addEventListener('click', function () {
-          toastr.success('notifications sent', 'Bulk Notifications');
-        });
+      .getElementById('send-all-notifications')
+      .addEventListener('click', function () {
+        toastr.success('notifications sent', 'Bulk Notifications');
+      });
 
     $('.send-notification').on('click', (e) => {
-        toastr.success('notification sent', 'Single Notifications');
-      })
-    
+      toastr.success('notification sent', 'Single Notifications');
+    })
+
 
 
   </script>
