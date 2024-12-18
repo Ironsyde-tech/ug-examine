@@ -33,6 +33,135 @@
   <div id="add-new-entry" class="modal">
     <p>Add new entry form goes here</p>
     <a href="#" rel="modal:close">Close</a>
+
+<style>
+
+.input_DIV{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 0.1rem;
+}
+.input{
+   border-radius: 1rem;
+   height: 3rem;
+}
+
+.input_DIV label{
+  margin-top: 10px;
+}
+
+.course_title {
+    font-weight: 500;
+    background: #052169;
+    padding: 0.5rem;
+    border-radius: 50px;
+    font-size: 16px;
+    color: white;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    margin-top: -2rem;
+}
+.buttons{
+  width: 10rem !important;
+  padding: 0.5rem !important;
+  border-radius: 25px;
+  border: 10px solid white;
+}
+.buttons:hover{
+  cursor: pointer;
+}
+
+.cancel{
+  background: red !important;
+  text-decoration: none;
+  color: white;
+}
+.confirm{
+    background: #052169;
+    color: white;
+}
+
+{{!- --}}
+  
+</style>
+<body>
+  <div id="add-new-entry" class="modal">
+    <p><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" />
+    <link rel="stylesheet" href="./cou.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="rectangle">
+        <h6 class="couse_head" align="center">
+          <span class="course_title">ADD COURSE </span>
+        </h6>
+
+          <div style="margin-top: 1rem;">
+          <div class="input_DIV">
+
+            <input type="text" class="input" id="course_code">
+
+            <Label for="course_code">Course Code</Label>
+
+          </div>
+
+                    <div class="input_DIV">
+
+            <input type="text" class="input" id="course_name">
+
+            <Label for="course_name">Course Name</Label>
+
+          </div>
+
+          <div class="input_DIV">
+
+            <input type="text" class="input" id="course_period">
+
+            <Label for="course_period">Study Period</Label>
+
+          </div>
+
+       <div class="input_DIV">
+
+            <input type="text" class="input" id="course_credits">
+
+            <Label for="course_credits">Academic Credits</Label>
+
+          </div>
+          </div>
+
+
+
+        <h6 class="rectangle-5" align="center" style="padding: 10px;">
+         {{!-- <a href="#" rel="modal:close" class="buttons cancel">CANCEL</a
+          > --}}
+          <button class="submit-button buttons confirm">SUBMIT</button>
+        </h6>
+      </div>
+
+      <div class="flex-column">
+        <div class="line"></div>
+        <div class="line-6"></div>
+        <div class="line-7"></div>
+        <div class="line-8"></div>
+        <div class="line-9"></div>
+        <div class="line-a"></div>
+      </div>
+      <span class="text-2"></span>
+    </div>
+  </body>
+</html>
+</p>
+    {{!-- <a href="#" rel="modal:close">Close</a> --}}
   </div>
 
   <div class="course-database" id="courseDatabaseContainer">

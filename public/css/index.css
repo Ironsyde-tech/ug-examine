@@ -11,6 +11,11 @@
 .course-database-inner {
   width: 41px;
 }
+
+.blocker{
+  z-index: 500 !important;
+}
+
 .primary-nav-child {
   width: 429px;
   height: 1040px;
@@ -2589,6 +2594,11 @@
     var(--padding-lg);
   z-index: 3;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 06df64b (Initial commit)
 .div9 {
   flex: 1;
   position: relative;
