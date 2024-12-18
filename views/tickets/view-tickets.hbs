@@ -16,16 +16,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Trykker:wght@400&display=swap" />
 
-  <!-- Remember to include jQuery :) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-
-  <!-- jQuery Modal -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
   <script src="/js/api.js"></script>
 </head>
 
@@ -248,19 +242,7 @@
     </section>
   </div>
 
-  <script>
-    var hiJusticeText = document.getElementById("hiJusticeText");
-    if (hiJusticeText) {
-      hiJusticeText.addEventListener("click", function () {
-        var anchor = document.querySelector(
-          "[data-scroll-to='profileImagePlaceholder']"
-        );
-        if (anchor) {
-          anchor.scrollIntoView({ block: "start", behavior: "smooth" });
-        }
-      });
-    }
-  </script>
+  
 </body>
 
 </html>

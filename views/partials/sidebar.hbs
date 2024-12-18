@@ -89,7 +89,14 @@
         <img class="image-20-icon1" loading="lazy" alt="" src="/img/image-20@2x.png" />
 
         <div class="logout-wrapper">
-            <h3 class="logout1">Logout</h3>
+            <h3 class="logout1" id="logout1">Logout</h3>
         </div>
     </div>
 </div>
+<script type="application/javascript">
+
+    var logoutButton = document.getElementById("logout1");
+    if (logoutButton) {
+        logoutButton.addEventListener("click", logoutHandler);
+    }
+</script>

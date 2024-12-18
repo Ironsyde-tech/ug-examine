@@ -20,7 +20,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-
   <script src="/js/api.js"></script>
 
   <style>
@@ -453,29 +452,7 @@
     </main>
   </div>
 
-  <script>
-    var hiJusticeText = document.getElementById("hiJusticeText");
-    if (hiJusticeText) {
-      hiJusticeText.addEventListener("click", function () {
-        var anchor = document.querySelector("[data-scroll-to='profilePicture']");
-        if (anchor) {
-          anchor.scrollIntoView({ block: "start", behavior: "smooth" });
-        }
-      });
-    }
-
-    {
-      {
-        !-- var lecturersDatabaseContainer = document.getElementById(
-          "lecturersDatabaseContainer"
-        );
-        if (lecturersDatabaseContainer) {
-          lecturersDatabaseContainer.addEventListener("click", function (e) {
-            window.location.href = "./allocations.html";
-          });
-        } --}
-    }
-  </script>
+  
 </body>
 
 </html>

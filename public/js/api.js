@@ -14,6 +14,14 @@ function unauthorizedHandler(result) {
     return false;
 }
 
+
+
+function logoutHandler() {
+    localStorage.clear();
+    window.location.href = `/ui/auth/login?next=${encodeURIComponent(window.location.pathname)}`;
+    return true;
+}
+
 function loginHandler(e) {
     const raw = JSON.stringify({
         "username": document.getElementById('email').value,
