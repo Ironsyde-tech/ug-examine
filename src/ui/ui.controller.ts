@@ -8,20 +8,20 @@ export class UiController {
     @Get('')
     @Render('index')
     home() {
-        return { message: 'Hello world!', name: "kwame" };
+        return { message: 'Hello world!', name: "Kwame" };
     }
 
 
     @Get('/submit ticket')
     @Render('submit ticket/submit ticket')
     submit() {
-        return { message: 'Hello world!', name: "kwame" };
+        return { message: 'Hello world!', name: "Kwame" };
     }
 
     @Get('/homepage')
     @Render('homepage/homepage')
     homepage() {
-        return { message: 'Hello world!', name: "kwame" };
+        return { message: 'Hello world!', name: "Kwame" };
     }
 
 
@@ -31,13 +31,13 @@ export class UiController {
         // this.apiService.listAllocations().subscribe((res) => {
         //     console.log(res)
         // });
-        return { message: 'Hello world!', name: "kwame" };
+        return { message: 'Hello world!', name: "Kwame" };
     }
 
     @Get('/courses')
     @Render('courses/index')
     courses() {
-        return { message: 'Hello world!', name: "kwame", courses: [
+        return { message: 'Hello world!', name: "Kwame", courses: [
             { code: 'DCIT 104', name: 'Programming', studyPeriod: 'Level 100 - Second Semester', academicCredits: 3 },
         ] };
     }
@@ -45,31 +45,31 @@ export class UiController {
     @Get('/allocations')
     @Render('allocations/allocations')
     allocationsPage() {
-        return { message: 'Hello world!', name: "kwame" };
+        return { message: 'Hello world!', name: "Kwame" };
     }
 
     @Get('auth/login')
     @Render('auth/login')
     login() {
-        return { message: 'Hello world!', name: "kwame" };
+        return { message: 'Hello world!', name: "Kwame" };
     }
 
     @Get('auth/forgot-password')
     @Render('auth/forgot-password')
     forgotPassword() {
-        return { message: 'Hello world!', name: "kwame" };
+        return { message: 'Hello world!', name: "Kwame" };
     }
 
     @Get('auth/otp')
     @Render('auth/otp')
     otp() {
-        return { message: 'Hello world!', name: "kwame" };
+        return { message: 'Hello world!', name: "Kwame" };
     }
 
     @Get('/lecturers')
     @Render('lecturers/lecturers-database')
     lecturers() {
-        return { message: 'Hello world!', name: "kwame" };
+        return { message: 'Hello world!', name: "Kwame" };
     }
 
     @Get('/tickets')
@@ -93,7 +93,7 @@ export class UiController {
         
         return {
             message: 'Hello world!',
-            name: "Alex",
+            name: "Kwame",
             tickets,
             statistics
         };

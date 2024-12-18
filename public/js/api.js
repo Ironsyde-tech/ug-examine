@@ -5,6 +5,44 @@ const myHeaders = new Headers();
 myHeaders.append("accept", "application/json");
 myHeaders.append("Content-Type", "application/json");
 
+function unauthorizedHandler(result) {
+    if (result.statusCode == 401) {
+        window.location.href = `/ui/auth/login?next=${encodeURIComponent(window.location.pathname)}`
+        return true;
+    }
+
+    return false;
+}
+
+function loginHandler(e) {
+    const raw = JSON.stringify({
+        "username": document.getElementById('email').value,
+        "password": document.getElementById('password').value
+    });
+
+    const myHeaders = new Headers();
+    myHeaders.append("accept", "application/json");
+    myHeaders.append("Content-Type", "application/json");
+
+
+
+    const requestOptions = {
+        method: "POST",
+        credentials: 'include',
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+    fetch("/auth/login", requestOptions)
+        .then((response) => response.json())
+        .then((result) => {
+            localStorage.setItem('access_token', result.access_token);
+            window.location.href = new URLSearchParams(window.location.search).get('next') || "/ui/timetable";
+        })
+        .catch((error) => console.error(error));
+
+}
 
 function listAllocations() {
     myHeaders.append('authorization', `Bearer ${localStorage.getItem('access_token')}`);
@@ -15,10 +53,14 @@ function listAllocations() {
     })
         .then((response) => response.json())
         .then((result) => {
+            if (unauthorizedHandler(result)) return;
             console.log(result);
-            
+
+
         })
-        .catch((error) => console.error(error));
+        .catch((error) => {
+            console.error(error);
+        });
 }
 
 function listTickets() {
@@ -30,8 +72,9 @@ function listTickets() {
     })
         .then((response) => response.json())
         .then((result) => {
+            if (unauthorizedHandler(result)) return;
             console.log(result);
-            
+
         })
         .catch((error) => console.error(error));
 }
@@ -49,8 +92,9 @@ function listCourses() {
     })
         .then((response) => response.json())
         .then((result) => {
+            if (unauthorizedHandler(result)) return;
             console.log(result);
-            
+
         })
         .catch((error) => console.error(error));
 }
@@ -64,8 +108,9 @@ function viewTimetable() {
     })
         .then((response) => response.json())
         .then((result) => {
+            if (unauthorizedHandler(result)) return;
             console.log(result);
-            
+
         })
         .catch((error) => console.error(error));
 }
@@ -79,8 +124,9 @@ function listLecturers() {
     })
         .then((response) => response.json())
         .then((result) => {
+            if (unauthorizedHandler(result)) return;
             console.log(result);
-            
+
         })
         .catch((error) => console.error(error));
 }
