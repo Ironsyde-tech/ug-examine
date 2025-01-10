@@ -138,3 +138,105 @@ function listLecturers() {
         })
         .catch((error) => console.error(error));
 }
+
+
+
+
+function initAddCourseHandler() {
+    $('.add-course-form button.confirm').off('click');
+    $('.add-course-form button.confirm').on('click', (e) => {
+        e.preventDefault();
+
+        const data = {
+            code: $('#course_code').val(),
+            name: $('#course_name').val(),
+            period: $('#course_period').val(),
+            credits: $('#course_credits').val(),
+        };
+
+        console.log(data);
+
+        myHeaders.append('authorization', `Bearer ${localStorage.getItem('access_token')}`);
+        fetch(`${baseUrl}/course`, {
+            method: "POST",
+            credentials: 'include',
+            headers: myHeaders,
+            data
+        })
+            .then((response) => response.json())
+            .then((result) => {
+                if (unauthorizedHandler(result)) return;
+                console.log(result);
+
+            })
+            .catch((error) => console.error(error));
+
+
+    })
+}
+
+function initAddLecturerHandler() {
+    $('.add-lecturer-form button.confirm').off('click');
+    $('.add-lecturer-form button.confirm').on('click', (e) => {
+        e.preventDefault();
+
+        const data = {
+            code: $('#course_code').val(),
+            name: $('#course_name').val(),
+            period: $('#course_period').val(),
+            credits: $('#course_credits').val(),
+        };
+
+        console.log(data);
+
+        myHeaders.append('authorization', `Bearer ${localStorage.getItem('access_token')}`);
+        fetch(`${baseUrl}/course`, {
+            method: "POST",
+            credentials: 'include',
+            headers: myHeaders,
+            data
+        })
+            .then((response) => response.json())
+            .then((result) => {
+                if (unauthorizedHandler(result)) return;
+                console.log(result);
+
+            })
+            .catch((error) => console.error(error));
+
+
+    })
+}
+
+function initAddAllocationHandler() {
+    $('.add-allocation-form button.confirm').off('click');
+    $('.add-allocation-form button.confirm').on('click', (e) => {
+        e.preventDefault();
+
+        const data = {
+            code: $('#course_code').val(),
+            name: $('#course_name').val(),
+            period: $('#course_period').val(),
+            credits: $('#course_credits').val(),
+        };
+
+        console.log(data);
+
+        myHeaders.append('authorization', `Bearer ${localStorage.getItem('access_token')}`);
+        fetch(`${baseUrl}/course`, {
+            method: "POST",
+            credentials: 'include',
+            headers: myHeaders,
+            data
+        })
+            .then((response) => response.json())
+            .then((result) => {
+                if (unauthorizedHandler(result)) return;
+                console.log(result);
+
+            })
+            .catch((error) => console.error(error));
+
+
+    })
+}
