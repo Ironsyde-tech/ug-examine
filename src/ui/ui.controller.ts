@@ -3,7 +3,7 @@ import { ApiService } from './api.service';
 
 @Controller('ui')
 export class UiController {
-    constructor(private readonly apiService: ApiService) { }
+    constructor(private readonly apiService: ApiService) {  }
 
     @Get('')
     @Render('index')
@@ -37,6 +37,10 @@ export class UiController {
     @Get('/courses')
     @Render('courses/index')
     courses() {
+                this.apiService.listCourses().subscribe((res) => {
+        console.log(res)
+        });
+
         return { message: 'Hello world!', name: "Kwame", courses: [
             { code: 'DCIT 104', name: 'Programming', studyPeriod: 'Level 100 - Second Semester', academicCredits: 3 },
         ] };

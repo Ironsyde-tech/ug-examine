@@ -152,16 +152,17 @@ function initAddCourseHandler() {
             name: $('#course_name').val(),
             period: $('#course_period').val(),
             credits: $('#course_credits').val(),
+            campus: "main"
         };
 
         console.log(data);
 
         myHeaders.append('authorization', `Bearer ${localStorage.getItem('access_token')}`);
-        fetch(`${baseUrl}/course`, {
+        fetch(`${baseUrl}/courses`, {
             method: "POST",
             credentials: 'include',
             headers: myHeaders,
-            data
+           body:JSON.stringify(data)
         })
             .then((response) => response.json())
             .then((result) => {
