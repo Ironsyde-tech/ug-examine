@@ -18,6 +18,8 @@ function unauthorizedHandler(result) {
 
 function logoutHandler() {
     localStorage.clear();
+    document.cookie = `access_token=`;
+    setTimeout(()=>{},500);
     window.location.href = `/ui/auth/login?next=${encodeURIComponent(window.location.pathname)}`;
     return true;
 }
@@ -45,7 +47,10 @@ function loginHandler(e) {
     fetch("/auth/login", requestOptions)
         .then((response) => response.json())
         .then((result) => {
+            document.cookie = `access_token=${result.access_token}`;
             localStorage.setItem('access_token', result.access_token);
+            
+            setTimeout(()=>{},500);
             window.location.href = new URLSearchParams(window.location.search).get('next') || "/ui/timetable";
         })
         .catch((error) => console.error(error));

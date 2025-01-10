@@ -1,4 +1,4 @@
-import { Controller, Get, Render } from '@nestjs/common';
+import { Controller, Get, Render, Req } from '@nestjs/common';
 import { ApiService } from './api.service';
 
 @Controller('ui')
@@ -36,18 +36,20 @@ export class UiController {
 
     @Get('/courses')
     @Render('courses/index')
-    async courses() {
+    async courses(@Req() req) {
                 
 
+        
         let [courses]: any[] = await Promise.all([
             new Promise((resolve, reject) => {
-                this.apiService.listCourses().subscribe((res) => {
-                    resolve(res)
+                this.apiService.listCourses(req).subscribe((res) => {
+                    resolve(res.data)
                 }, reject)
             }),
         ]);
 
         courses = courses.map(c => ({ ...c, name: 'Programming', studyPeriod: 'Level 100 - Second Semester', academicCredits: 3 }))
+        
         return { message: 'Hello world!', name: "Kwame", courses };
     }
 

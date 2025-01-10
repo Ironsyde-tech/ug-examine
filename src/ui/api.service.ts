@@ -19,8 +19,14 @@ export class ApiService {
         return this.httpService.get(`${this.baseUrl}/tickets`);
     }
 
-    listCourses(): Observable<AxiosResponse<any>> {
-        return this.httpService.get(`${this.baseUrl}/courses`);
+    listCourses(req): Observable<AxiosResponse<any>> {
+        const token = req.headers['cookie'].split(';').find(o => o.startsWith('access_token='))?.replace('access_token=', '')?.trim();
+        
+        return this.httpService.get(`${this.baseUrl}/courses`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
     }
 
 
