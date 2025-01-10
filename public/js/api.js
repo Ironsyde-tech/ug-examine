@@ -173,7 +173,7 @@ function initAddCourseHandler() {
             .catch((error) => console.error(error));
 
 
-    })
+    });
 }
 
 function initAddLecturerHandler() {
@@ -201,6 +201,7 @@ function initAddLecturerHandler() {
             .then((result) => {
                 if (unauthorizedHandler(result)) return;
                 console.log(result);
+                toastr.success('Added', 'Course Added');
 
             })
             .catch((error) => console.error(error));

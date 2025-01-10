@@ -36,14 +36,20 @@ export class UiController {
 
     @Get('/courses')
     @Render('courses/index')
-    courses() {
-                this.apiService.listCourses().subscribe((res) => {
-        console.log(res)
-        });
+    async courses() {
+                
 
-        return { message: 'Hello world!', name: "Kwame", courses: [
-            { code: 'DCIT 104', name: 'Programming', studyPeriod: 'Level 100 - Second Semester', academicCredits: 3 },
-        ] };
+        let [courses]:any[] = await Promise.all([
+            // new Promise((resolve, reject) => {
+            //     this.apiService.listTickets().subscribe((res) => {
+            //         console.log(res)
+            //     })
+            // }),
+            this.apiService.listCourses()
+        ]);
+
+        courses = courses.map(c => ({ ...c, name: 'Programming', studyPeriod: 'Level 100 - Second Semester', academicCredits: 3 }))
+        return { message: 'Hello world!', name: "Kwame", courses };
     }
 
     @Get('/allocations')
