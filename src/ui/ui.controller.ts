@@ -39,13 +39,12 @@ export class UiController {
     async courses() {
                 
 
-        let [courses]:any[] = await Promise.all([
-            // new Promise((resolve, reject) => {
-            //     this.apiService.listTickets().subscribe((res) => {
-            //         console.log(res)
-            //     })
-            // }),
-            this.apiService.listCourses()
+        let [courses]: any[] = await Promise.all([
+            new Promise((resolve, reject) => {
+                this.apiService.listCourses().subscribe((res) => {
+                    resolve(res)
+                }, reject)
+            }),
         ]);
 
         courses = courses.map(c => ({ ...c, name: 'Programming', studyPeriod: 'Level 100 - Second Semester', academicCredits: 3 }))

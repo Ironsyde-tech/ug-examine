@@ -92,11 +92,19 @@ function getTicketStats() {
 }
 
 function listCourses() {
+    const myHeaders = new Headers();
+    myHeaders.append("accept", "application/json");
+    myHeaders.append("Content-Type", "application/json");
     myHeaders.append('authorization', `Bearer ${localStorage.getItem('access_token')}`);
+    
     return fetch(`${baseUrl}/courses`, {
         method: "GET",
         credentials: 'include',
-        headers: myHeaders,
+        headers: {
+            'accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
+          },
     })
         .then((response) => response.json())
         .then((result) => {
