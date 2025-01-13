@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8080';
+let baseUrl = 'http://localhost:8080';
 
 
 const myHeaders = new Headers();
@@ -24,7 +24,14 @@ function logoutHandler() {
     return true;
 }
 
+function setDomainCookie(name, value, days, domain) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = `${name}=${value}; expires=${expires.toUTCString()}; path=/; domain=${domain}`;
+}
+
 function loginHandler(e) {
+    localStorage.clear();
     const raw = JSON.stringify({
         "username": document.getElementById('email').value,
         "password": document.getElementById('password').value
@@ -47,11 +54,14 @@ function loginHandler(e) {
     fetch("/auth/login", requestOptions)
         .then((response) => response.json())
         .then((result) => {
-            document.cookie = `access_token=${result.access_token}`;
-            localStorage.setItem('access_token', result.access_token);
             
-            setTimeout(()=>{},500);
-            window.location.href = new URLSearchParams(window.location.search).get('next') || "/ui/timetable";
+            setTimeout(()=>{
+                console.log('result',result);
+                console.log('result.access_token',result.access_token);
+                localStorage.setItem('access_token', result.access_token);
+                setDomainCookie('access_token', localStorage.getItem('access_token'), 7, window.location.hostname);
+                window.location.href = new URLSearchParams(window.location.search).get('next') || "/ui/timetable";
+            },500);
         })
         .catch((error) => console.error(error));
 

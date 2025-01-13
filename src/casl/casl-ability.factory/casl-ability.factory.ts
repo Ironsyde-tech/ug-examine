@@ -41,6 +41,7 @@ export class CaslAbilityFactory {
       Ability<[Action, Subjects]>
     >(Ability as AbilityClass<AppAbility>);
 
+    
     if (user.role === UserRole.ADMIN) {
       can(Action.Manage, 'all'); // read-write access to everything
       return build({

@@ -49,10 +49,14 @@ export class PoliciesGuard implements CanActivate {
     try {
       const payload = await this.jwtService.verifyAsync<JWTPayload>(token, {
         secret: process.env.JWT_SECRET,
-      });
+      });      
+      
       // 💡 We're assigning the payload to the request object here
       // so that we can access it in our route handlers
+      
+      
       const ability = this.caslAbilityFactory.createForUser(payload.user);
+      
 
       request['user'] = payload;
 

@@ -32,10 +32,11 @@ export class AuthService {
       role: user.role,
       user,
     };
+    
     return {
       access_token: await this.jwtService.signAsync(payload, {
         secret: process.env.JWT_SECRET,
-        expiresIn: '1d',
+        expiresIn: process.env.JWT_EXPIRES_IN,
       }),
     };
   }
