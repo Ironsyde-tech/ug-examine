@@ -18,8 +18,7 @@ function unauthorizedHandler(result) {
 
 function logoutHandler() {
     localStorage.clear();
-    document.cookie = `access_token=`;
-    setTimeout(()=>{},500);
+    setDomainCookie('access_token', localStorage.getItem('access_token'), -1, window.location.hostname);
     window.location.href = `/ui/auth/login?next=${encodeURIComponent(window.location.pathname)}`;
     return true;
 }
@@ -32,6 +31,8 @@ function setDomainCookie(name, value, days, domain) {
 
 function loginHandler(e) {
     localStorage.clear();
+    setDomainCookie('access_token', localStorage.getItem('access_token'), -1, window.location.hostname);
+
     const raw = JSON.stringify({
         "username": document.getElementById('email').value,
         "password": document.getElementById('password').value
@@ -55,13 +56,9 @@ function loginHandler(e) {
         .then((response) => response.json())
         .then((result) => {
             
-            setTimeout(()=>{
-                console.log('result',result);
-                console.log('result.access_token',result.access_token);
-                localStorage.setItem('access_token', result.access_token);
-                setDomainCookie('access_token', localStorage.getItem('access_token'), 7, window.location.hostname);
-                window.location.href = new URLSearchParams(window.location.search).get('next') || "/ui/timetable";
-            },500);
+            localStorage.setItem('access_token', result.access_token);
+            setDomainCookie('access_token', localStorage.getItem('access_token'), 7, window.location.hostname);
+            window.location.href = new URLSearchParams(window.location.search).get('next') || "/ui/timetable";
         })
         .catch((error) => console.error(error));
 
